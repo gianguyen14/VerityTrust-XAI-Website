@@ -14,6 +14,8 @@ Thư mục này chứa **toàn bộ dữ liệu kiểm thử** dùng để đo �
 | `set-b-phishing.txt` | **Tập B**: web lừa đảo đã xác minh thủ công (phishunt.io, tinnhiemmang.vn, blocklist web bán hàng lừa đảo, phishing.army) | 185 |
 | `set-c-legit-gambling.json` | **Tập C**: web hợp pháp Tranco thứ hạng 10.000–1.000.000 (`safe`) + web cờ bạc (`dangerous`), gán nhãn thủ công ngày 08/11/2026; không trùng tên miền nào với tập A/B và dữ liệu huấn luyện | 105 + 171 |
 | `set-c-phishing.txt` | **Tập C**: web lừa đảo từ OpenPhish và phishunt.io ngày 08/11/2026, chỉ giữ trang có dấu hiệu rõ ràng | 38 |
+| `set-d-legit-gambling.json` | **Tập D**: web hợp pháp Tranco 10.000–1.000.000 (`safe`) + web cờ bạc (`dangerous`), gán nhãn thủ công ngày 09/11/2026; không trùng tập A/B/C, dữ liệu train hay danh sách cờ bạc đã rà soát | 122 + 132 |
+| `set-d-phishing.txt` | **Tập D**: 10 trang lừa đảo từ feed + 22 shop/đầu tư giả, chỉ giữ trang có dấu hiệu rõ ràng | 32 |
 | `eval-dataset.json` | Phần "tune" của tập A, dùng để tìm lỗi khi phát triển | 85 + 18 |
 | `eval-holdout.json`, `eval-holdout2.json` | Phần "test" của tập A, chỉ dùng để báo cáo | 80 + 15, 40 + 0 |
 
@@ -30,6 +32,7 @@ Thư mục này chứa **toàn bộ dữ liệu kiểm thử** dùng để đo �
 | `set-a.json` | Kết quả của bản hiện tại trên tập A |
 | `set-b.json` | Kết quả của bản hiện tại trên tập B |
 | `set-c.json` | Kết quả của bản hiện tại trên tập C |
+| `set-d.json` | Kết quả trên tập D, kèm trường `factors` (bằng chứng từng web) |
 | `set-b-veritytrust-engine-v2.json`, `set-b-veritytrust-engine-v3.json` | Tập B chạy kèm VerityTrust Decision Engine ở chế độ chạy ngầm; trường `jev` chứa câu trả lời của engine cho từng web |
 | `set-b-before-brand-fix.json` | Kết quả trên tập B **trước** khi sửa luật giả danh thương hiệu, tức số đo chưa tinh chỉnh |
 

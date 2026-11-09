@@ -3,6 +3,7 @@
  *
  *   npx tsx scripts/collect-pages.ts [--phishing 4000] [--legit 4000] [--concurrency 24] [--out .cache/training/real-pages.jsonl]
  *     [--phishing-file urls.txt]  (thay nguồn mặc định bằng danh sách URL/tên miền nguy hiểm, giữ nguyên thứ tự)
+ *     [--legit-file urls.txt]     (tương tự cho phía hợp pháp)
  *
  * - Lừa đảo: URL từ Phishing.Database (phishing-links-ACTIVE) + OpenPhish
  * - Hợp pháp: tên miền từ Tranco/Majestic (ưu tiên ~30% tên miền .vn), lấy trang chủ
@@ -125,6 +126,11 @@ const other = shuffle(legitPool.filter(d => !d.endsWith('.vn')));
 const legitCandidates = [...vn.slice(0, Math.round(LEGIT_TARGET * 0.6)), ...other.slice(0, LEGIT_TARGET * 3)]
   .map(d => `https://${d}/`);
 shuffle(legitCandidates);
+const legitFile = arg('legit-file', '');
+if (legitFile) {
+  legitCandidates.length = 0;
+  legitCandidates.push(...fs.readFileSync(legitFile, 'utf8').split('\n').map(l => l.trim()).filter(l => /^https?:\/\//.test(l)).filter(u => !excludedUrls.has(u) && !excludedOwners.has(ownerOf(u) || '')));
+}
 
 // ---------------------------------------------------------------- tiếp tục từ lần chạy trước
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

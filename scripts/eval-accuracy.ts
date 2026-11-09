@@ -27,7 +27,7 @@ const SEED = parseInt(arg('seed', '42'), 10);
 const CONCURRENCY = parseInt(arg('concurrency', '6'), 10);
 
 interface Sample { url: string; label: 'safe' | 'dangerous'; group: string }
-interface Outcome extends Sample { score: number | null; status: string; engine: string; ms: number; error?: string; jev?: unknown }
+interface Outcome extends Sample { score: number | null; status: string; engine: string; ms: number; error?: string; jev?: unknown; factors?: Array<[string, number]> }
 
 function seededShuffle<T>(arr: T[], seed: number): T[] {
   const a = [...arr];
@@ -76,7 +76,7 @@ async function evaluate(sample: Sample): Promise<Outcome> {
     if (!res.ok) {
       return { ...sample, score: null, status: `HTTP ${res.status}`, engine: '', ms: Date.now() - start, error: data?.message };
     }
-    return { ...sample, score: data.trust_score, status: data.status, engine: data.analysis_engine || '', ms: Date.now() - start, ...(data.score_breakdown?.jev_decision ? { jev: data.score_breakdown.jev_decision } : {}) };
+    return { ...sample, score: data.trust_score, status: data.status, engine: data.analysis_engine || '', ms: Date.now() - start, ...(data.score_breakdown?.jev_decision ? { jev: data.score_breakdown.jev_decision } : {}), factors: data.score_breakdown?.factors?.map((f: { id: string; delta: number }) => [f.id, f.delta]) };
   } catch (err: any) {
     return { ...sample, score: null, status: 'error', engine: '', ms: Date.now() - start, error: err?.message };
   }
