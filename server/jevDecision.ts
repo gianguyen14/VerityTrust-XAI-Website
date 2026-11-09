@@ -62,7 +62,7 @@ export function getJevConfig(): JevConfig {
     openJevApiKey: process.env.OPENJEV_API_KEY || '',
     veritytrustUrl: process.env.VERITYTRUST_ENGINE_URL || 'http://homenasproxmox.duckdns.org:20128/v1/chat/completions',
     veritytrustKey: process.env.VERITYTRUST_ENGINE_KEY || '',
-    veritytrustModel: process.env.VERITYTRUST_ENGINE_MODEL || '2/veritytrust-fast-decision',
+    veritytrustModel: process.env.VERITYTRUST_ENGINE_MODEL || 'veritytrust-fast-decision/veritytrust-fast-decision',
     shadow: process.env.JEV_SHADOW === 'true',
     grayZoneOnly: process.env.JEV_GRAY_ZONE_ONLY !== 'false', // Mặc định chỉ gọi cho ca vùng xám 45-74 điểm
     timeoutMs: parseInt(process.env.JEV_TIMEOUT_MS || '5000', 10),
