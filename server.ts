@@ -1927,7 +1927,7 @@ async function computeScanReport(params: {
         persona,
         lang,
         totalPipelineMs,
-        analysisEngine: `Fast Evidence Engine${jevDecision ? ` [Jev: ${jevDecision.engine}]` : ''}`,
+        analysisEngine: `Fast Evidence Engine${jevDecision ? ` [${jevDecision.engine}]` : ''}`,
       });
     } else {
       let dnsResult: any = null;
@@ -2137,7 +2137,7 @@ Return strictly valid JSON conforming to this schema without markdown formatting
         persona,
         lang,
         totalPipelineMs: elapsed,
-        analysisEngine: `Verity Fallback Evidence Engine${jevDecision ? ` [Jev: ${jevDecision.engine}]` : ''}`,
+        analysisEngine: `Verity Fallback Evidence Engine${jevDecision ? ` [${jevDecision.engine}]` : ''}`,
       });
     } else {
       parsedReport = runSimplifiedVerificationModel({
@@ -2724,7 +2724,7 @@ async function computeAnalyzeResult(targetUrl: string, hostname: string): Promis
       trust_score: assessment.score,
       status: assessment.status,
       analysis_engine: jevDecision && !jevDecision.shadow
-        ? `${jevDecision.engine === 'jev-api' ? 'Jev AI (TypeSafe)' : jevDecision.engine === 'veritytrust' ? 'VerityTrust Decision Engine' : 'OpenJev Gateway'} + Verity Evidence Engine`
+        ? `${jevDecision.engine === 'jev-api' ? 'Jev AI (TypeSafe)' : jevDecision.engine === 'VerityTrust-Engine' ? 'VerityTrust-Engine' : 'OpenJev Gateway'} + Verity Evidence Engine`
         : 'Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)',
       summary: evidenceSummary(evidence, assessment),
       age_rating: assessment.status === 'Dangerous'

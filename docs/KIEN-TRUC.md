@@ -128,7 +128,7 @@ Mã: [`server/headless.ts`](../server/headless.ts). Cấu hình: `HEADLESS_RENDE
 - `JEV_MODE=api` mà thiếu key → tầng này tự bỏ qua, không gửi request.
 - Tóm tắt nội dung trang chỉ được gửi tới Jev khi bạn bật tầng này.
 
-### VerityTrust Decision Engine (`JEV_MODE=veritytrust`)
+### VerityTrust-Engine (`JEV_MODE=veritytrust`)
 
 Một máy chủ riêng, đặt sau cổng OmniRoute (chuẩn OpenAI). Mã nguồn bản hiện tại: [`engine/engine.py`](../engine/engine.py), dùng mô hình phân loại lừa đảo đa ngôn ngữ [`Horizon-Labs/phishing-scam-detector-base`](https://huggingface.co/Horizon-Labs/phishing-scam-detector-base) (mmBERT, ONNX int8, chạy CPU bằng onnxruntime, khoảng 1 GB RAM). Bản cũ dùng mô hình NLI zero-shot `multilingual-MiniLMv2-L6-mnli-xnli` và bị loại sau khi đo (xem [DANH-GIA.md](DANH-GIA.md#trọng-tài-veritytrust-decision-engine-minilmv2-zero-shot)). Verity gửi **một dòng metadata** trong `messages[0].content`:
 

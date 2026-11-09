@@ -12,7 +12,7 @@ import { isHeadlessAvailable, renderPage } from './headless.ts';
 //                                -> dừng "An toàn" nếu chính thống/top 10k, "Nguy hiểm" nếu trong danh sách đen
 //  Tầng 2  Bằng chứng & AI cục bộ  HTML tĩnh, TLS, RDAP, 2 mô hình học sâu -> dừng nếu điểm < 45 hoặc >= 75
 //  Tầng 3  Headless (khi cần)    trang SPA/HTML rỗng: dựng bằng trình duyệt thật rồi chấm lại ở Tầng 2
-//  Tầng 4  Trọng tài OpenJev     chỉ cho ca vùng xám 45-74 (khi JEV_MODE bật)
+//  Tầng 4  Trọng tài VerityTrust-Engine     chỉ cho ca vùng xám 45-74 (khi JEV_MODE bật)
 //  Tầng 5  LLM giải thích        không nằm trong đường ống chấm điểm: /api/explain gọi khi người dùng yêu cầu
 // ============================================================================
 
@@ -42,7 +42,7 @@ const TIER_NAMES = [
   'Danh tiếng cứng & Tên miền',
   'Bằng chứng & AI cục bộ',
   'Headless Browser (khi cần)',
-  'Trọng tài OpenJev (vùng xám)',
+  'Trọng tài VerityTrust-Engine (vùng xám)',
 ] as const;
 
 // Tầng 2 -> Tầng 3: HTML tĩnh gần như rỗng hoặc là khung SPA (nội dung thật do JavaScript vẽ)

@@ -73,7 +73,7 @@ flowchart LR
     T1 --> T2["Tầng 2<br/>Đọc trang + TLS + tuổi tên miền<br/>+ 2 mô hình học sâu"]
     T2 -->|điểm dưới 45 hoặc từ 75| R([Kết luận])
     T2 -->|trang rỗng/SPA, vùng xám| T3["Tầng 3<br/>Dựng trang bằng Chrome"]
-    T3 --> T4["Tầng 4<br/>Trọng tài Jev / OpenJev / VerityTrust Engine<br/>(tuỳ chọn)"]
+    T3 --> T4["Tầng 4<br/>Trọng tài VerityTrust-Engine<br/>(tuỳ chọn)"]
     T4 --> R
     R -.->|người dùng bấm| T5["Tầng 5<br/>AI viết lời giải thích"]
 ```
@@ -127,7 +127,7 @@ JEV_MODE="api"
 JEV_API_KEY="khoá-typesafe"
 ```
 
-Có máy chủ VerityTrust Decision Engine (MiniLMv2, qua cổng OmniRoute) thì đặt `JEV_MODE="veritytrust"` và `VERITYTRUST_ENGINE_KEY`; nên chạy ngầm trước bằng `JEV_SHADOW=true` để đo. Muốn tự host, đặt `JEV_MODE="openjev"` và `OPENJEV_ENDPOINT` trỏ tới một máy chủ tương thích Jev. Chi tiết: [docs/KIEN-TRUC.md](docs/KIEN-TRUC.md#tầng-4--trọng-tài-jev--openjev-tuỳ-chọn).
+Có máy chủ VerityTrust-Engine (qua cổng OmniRoute) thì đặt `JEV_MODE="veritytrust"` và `VERITYTRUST_ENGINE_KEY`; nên chạy ngầm trước bằng `JEV_SHADOW=true` để đo. Muốn tự host, đặt `JEV_MODE="openjev"` và `OPENJEV_ENDPOINT` trỏ tới một máy chủ tương thích Jev. Chi tiết: [docs/KIEN-TRUC.md](docs/KIEN-TRUC.md#tầng-4--trọng-tài-jev--openjev-tuỳ-chọn).
 
 Toàn bộ biến cấu hình (tắt/bật từng nguồn dữ liệu, trình duyệt headless, trọng tài Jev…) được mô tả trong [`.env.example`](.env.example).
 

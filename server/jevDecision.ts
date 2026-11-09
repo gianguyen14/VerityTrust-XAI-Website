@@ -18,7 +18,7 @@ export const GRAY_ZONE_MIN = 45;
 export const GRAY_ZONE_MAX = 74;
 
 export interface JevDecisionResult {
-  engine: 'jev-api' | 'openjev' | 'veritytrust';
+  engine: 'jev-api' | 'openjev' | 'VerityTrust-Engine';
   latencyMs: number;
   /** true khi JEV_SHADOW=true: kết quả chỉ được ghi lại, không áp vào điểm */
   shadow?: boolean;
@@ -313,7 +313,7 @@ async function queryVeritytrustEngine(e: SiteEvidence, a: RiskAssessment, cfg: J
     console.log(`[Jev Gateway] 🎯 Phân xử (veritytrust, ${cfg.veritytrustModel}${cfg.shadow ? ', chạy ngầm' : ''}) ${latencyMs}ms: ${choice} (phishing ${(pPhish * 100).toFixed(0)}%, loại ${(choiceConf * 100).toFixed(0)}%)`);
 
     return {
-      engine: 'veritytrust',
+      engine: 'VerityTrust-Engine',
       latencyMs,
       isCredentialHarvesting: isCred,
       isCredentialHarvestingConfidence: isCred ? harmConf : 0,
@@ -339,7 +339,7 @@ async function queryVeritytrustEngine(e: SiteEvidence, a: RiskAssessment, cfg: J
  * các yếu tố rủi ro có giải thích minh bạch (Factor Breakdown).
  */
 export function applyJevDecision(a: RiskAssessment, j: JevDecisionResult): RiskAssessment {
-  const engineName = j.engine === 'jev-api' ? 'Jev AI (TypeSafe)' : j.engine === 'veritytrust' ? 'VerityTrust Decision Engine' : 'OpenJev Decision Gateway';
+  const engineName = j.engine === 'jev-api' ? 'Jev AI (TypeSafe)' : j.engine === 'VerityTrust-Engine' ? 'VerityTrust-Engine' : 'OpenJev Decision Gateway';
   const factors = [...a.factors];
   let score = a.score;
   let cap = a.cap;
