@@ -335,10 +335,21 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
         add('fake_shop_template', -40, 'Trang khớp khuôn shop giả hàng loạt', 'Tiêu đề chỉ là tên miền, kèm câu miễn phí vận chuyển theo ngưỡng đơn hàng: khuôn được dùng lặp lại trên rất nhiều tên miền shop lừa đảo.');
         capAt(30, 'malicious');
       }
-      // Luật rộng hơn khuôn shop giả nên chỉ áp dụng khi biết chắc tên miền còn mới
-      if (ageDays !== null && ageDays < 2 * 365 && isOpaqueShop(html, d.ownerDomain)) {
+      // Đã đọc trang liên hệ/pháp lý: dùng kết quả đó thay cho luật chỉ nhìn trang chủ
+      const shopPages = e.shopPages;
+      if (shopPages && shopPages.checked > 0 && recentlyRegistered && !isEstablished) {
+        if (!shopPages.contact) {
+          add('shop_no_contact', -25, 'Shop không công bố điện thoại hay email', 'Đã đọc trang liên hệ/giới thiệu: chỉ có form gửi tin nhắn, không có số điện thoại, email hay thông tin doanh nghiệp. Shop lừa đảo thường giấu danh tính theo cách này.');
+          capAt(40, 'suspicious');
+        }
+      } else if (ageDays !== null && ageDays < 2 * 365 && isOpaqueShop(html, d.ownerDomain)) {
         add('opaque_shop', -25, 'Shop mới, trang chủ không có thông tin liên hệ', 'Tên miền chưa đầy 2 năm tuổi, trang chào bán nhưng không công bố điện thoại, email hay thông tin doanh nghiệp; đây là đặc điểm phổ biến của shop lừa đảo.');
         capAt(40, 'suspicious');
+      }
+      // Luật Đức bắt buộc mọi shop có Impressum, kể cả shop lâu năm; tên miền cũ bị mua lại làm shop giả vẫn thiếu trang này
+      if (html.germanShop && !html.legalPageLink && !html.legalId && !shopPages?.legalId) {
+        add('shop_no_imprint', -20, 'Shop tiếng Đức không có Impressum', 'Luật Đức bắt buộc shop trực tuyến công bố Impressum (tên công ty, địa chỉ, số đăng ký). Trang này không có Impressum hay số đăng ký doanh nghiệp nào.');
+        capAt(45, 'suspicious');
       }
       if (themes.has('prize_scam')) {
         add('prize_scam', -20, 'Thông báo trúng thưởng/nhận quà', 'Nội dung dụ dỗ nhận thưởng - kịch bản lừa đảo kinh điển.');

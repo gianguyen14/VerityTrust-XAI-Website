@@ -243,9 +243,13 @@ export function isFakeShopTemplate(title: string, text: string, ownerDomain: str
 const SALE_TITLE = /\b(?:sale|outlet|angebote?|rabatte?|g[üu]nstig\w*|kaufen sie|ofertas?|descuentos?|offres?|promo(?:tions?)?)\b|\bbis zu\b|\d{2}\s?%/i;
 const SHOP_WORDS = /add to cart|shop now|track your order|warenkorb|kaufen|in den korb|panier|carrito|giỏ hàng|\bcart\b|\bshop\b/i;
 
+export function isShopPage(title: string, text: string): boolean {
+  return SHOP_WORDS.test(`${title} ${text.slice(0, 1500)}`);
+}
+
 export function isOpaqueShop(html: { title: string; text: string; contactInfo: boolean; taxId: boolean; moitBadge: boolean }, ownerDomain: string): boolean {
   if (html.contactInfo || html.taxId || html.moitBadge) return false;
-  if (!SHOP_WORDS.test(`${html.title} ${html.text.slice(0, 1500)}`)) return false;
+  if (!isShopPage(html.title, html.text)) return false;
   const compact = (v: string) => v.toLowerCase().replace(/[^a-z0-9]/g, '');
   const label = compact(parseDomain(ownerDomain).domainWithoutSuffix || ownerDomain);
   return SALE_TITLE.test(html.title) || (!!label && compact(html.title) === label);

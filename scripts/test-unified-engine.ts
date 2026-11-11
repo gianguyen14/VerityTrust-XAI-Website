@@ -39,6 +39,7 @@ const mockEvidenceImage: SiteEvidence = {
   finalUrlModelProbability: null,
   domainAge: { registeredAt: '2026-11-01', ageDays: 5, registrar: 'Namecheap' },
   threatListings: [],
+  shopPages: null,
   collectedMs: 15,
 };
 const scoreImage = scoreEvidence(mockEvidenceImage);
@@ -84,6 +85,7 @@ const mockEvidenceFavicon: SiteEvidence = {
   finalUrlModelProbability: null,
   domainAge: { registeredAt: '2026-11-01', ageDays: 6, registrar: 'Namecheap' },
   threatListings: [],
+  shopPages: null,
   collectedMs: 15,
 };
 const scoreFavicon = scoreEvidence(mockEvidenceFavicon);
@@ -147,6 +149,7 @@ const mockEvidenceSpa: SiteEvidence = {
   finalUrlModelProbability: null,
   domainAge: { registeredAt: '2026-11-05', ageDays: 2, registrar: 'Namecheap' },
   threatListings: [],
+  shopPages: null,
   collectedMs: 15,
 };
 const scoreSpa = scoreEvidence(mockEvidenceSpa);
@@ -190,6 +193,7 @@ const mockEvidenceSmb: SiteEvidence = {
   finalUrlModelProbability: null,
   domainAge: { registeredAt: '2026-06-01', ageDays: 155, registrar: 'TUCOWS' }, // Domain under 6 months (-22 penalty)
   threatListings: [],
+  shopPages: null,
   collectedMs: 15,
 };
 const scoreSmb = scoreEvidence(mockEvidenceSmb);

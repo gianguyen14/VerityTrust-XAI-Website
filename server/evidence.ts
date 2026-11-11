@@ -2,7 +2,7 @@ import net from 'node:net';
 import tls from 'node:tls';
 import { BlockedTargetError, FetchRedirectError, resolvePublicAddress, safeFetch } from './netSafety.ts';
 
-import { TARGETED_BRAND_NAMES, getDomainParts, isTrustedHost, type DomainParts } from './domainRules.ts';
+import { TARGETED_BRAND_NAMES, getDomainParts, isShopPage, isTrustedHost, type DomainParts } from './domainRules.ts';
 import { predictPhishingProbability } from './urlModel.ts';
 import {
   checkSafeBrowsing,
@@ -51,6 +51,16 @@ export interface HtmlEvidence {
   taxId: boolean;
   contactInfo: boolean;
   policyLinks: boolean;
+  /** Điện thoại hoặc email ở mọi định dạng quốc tế (contactInfo chỉ nhận số Việt Nam) */
+  contactDetails: boolean;
+  /** Số đăng ký doanh nghiệp / mã số thuế / VAT ở mọi quốc gia */
+  legalId: boolean;
+  /** Có liên kết tới trang thông tin pháp lý (Impressum, mentions légales...) */
+  legalPageLink: boolean;
+  /** Shop tiếng Đức (có giỏ hàng/phí vận chuyển bằng tiếng Đức): luật Đức bắt buộc có Impressum */
+  germanShop: boolean;
+  /** Trang liên hệ / pháp lý / giới thiệu cùng tên miền, trang pháp lý xếp trước */
+  infoPages: string[];
   brandMentions: string[];
   credentialPrompt: boolean;
   botChallenge: boolean;
@@ -93,7 +103,15 @@ export interface SiteEvidence {
   finalUrlModelProbability: number | null;
   domainAge: DomainAge;
   threatListings: string[];
+  /** Kết quả đọc trang liên hệ/pháp lý của shop chưa lâu năm (null nếu không đọc) */
+  shopPages: ShopPagesEvidence | null;
   collectedMs: number;
+}
+
+export interface ShopPagesEvidence {
+  checked: number;
+  contact: boolean;
+  legalId: boolean;
 }
 
 const BROWSER_HEADERS = {
@@ -276,6 +294,15 @@ const SHARED_ASSET_HOSTS = [
   'unpkg.com', 'imgur.com', 'amazonaws.com', 'azureedge.net', 'twimg.com', 'ytimg.com', 'licdn.com',
 ];
 
+const CONTACT_DETAILS = /[\w.+-]+@[\w-]+(?:\.[\w-]+)*\.[a-z]{2,}\b(?<!\.(?:png|jpe?g|webp|gif|svg))|(?:\+|\b00)\d{1,3}[\s()./-]*\d(?:[\s()./-]*\d){6,12}|(?:tel(?:efon|éfono|efono)?|phone|téléphone|điện thoại|hotline|call us)\s*[:.]?\s*\(?\+?\d[\d\s()./-]{6,}/i;
+const LEGAL_ID = /\bHR[AB]\s?\d{3,}|handelsregister|registergericht|ust[\s.-]*id|umsatzsteuer-?identifikationsnummer|steuer-?nr|\bvat\s*(?:no|number|id|reg)|\bsire[nt]\b|\brcs\s+[a-z]|\bkvk\b|partita iva|\bp\.\s?iva\b|\b[nc]if\s*:?\s*[a-z]?\d{7}|company (?:no|number|registration)|registered in (?:england|scotland|wales|ireland)|\babn\s*:?\s*\d|mã số (?:thuế|doanh nghiệp)|\bmst\b/i;
+const LEGAL_PAGE = /impressum|imprint|anbieterkennzeichnung|rechtliche[sn]? hinweise|legal[-_ ]notice|mentions[-_ ]l[ée]gales|aviso[-_ ]legal|note[-_ ]legali|colofon/i;
+const CONTACT_PAGE = /kontakt|contact|lien-he|liên hệ|contatti|contacto/i;
+const ABOUT_PAGE = /about|[uü]ber[-_ ]uns|chi[-_ ]siamo|qui[-_ ]sommes|gioi-thieu|giới thiệu/i;
+// Số điện thoại/email đôi khi chỉ nằm trong liên kết tel:/mailto: (vd tổng đài 1900xxxx)
+const CONTACT_LINK = /href\s*=\s*["']\s*(?:tel|mailto):\s*[+\w]/i;
+const GERMAN_SHOP = /\b(?:warenkorb|versandkosten|inkl\.? mwst|zur kasse|in den korb|kostenloser versand)\b/i;
+
 const SENSITIVE_FIELD_PATTERNS: Array<[string, RegExp]> = [
   ['OTP', /\b(?:otp|one[-_ ]?time|mã\s*otp|ma[-_]?otp|verification[-_ ]?code|sms[-_ ]?code)\b/i],
   ['Thẻ thanh toán', /\b(?:card[-_ ]?num|cc[-_ ]?num|cardnumber|cc-number|cvv|cvc|csc|expiry|exp[-_ ]?date|số\s*thẻ)\b/i],
@@ -308,6 +335,18 @@ export function analyzeHtml(html: string, pageUrl: string, ownerDomain: string):
     .find(x => x.d && x.d !== ownerDomain)?.d || null;
 
   const hrefs = [...html.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']*)["']/gi)].map(m => m[1].trim());
+  const anchors = [...html.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']*)["'][^>]*>([\s\S]{0,200}?)<\/a>/gi)]
+    .map(m => ({ href: m[1].trim(), label: `${m[1]} ${m[2].replace(/<[^>]+>/g, ' ')}` }));
+  const legalAnchors = anchors.filter(a => LEGAL_PAGE.test(a.label));
+  // Trang phụ cần đọc: pháp lý trước, rồi liên hệ, rồi giới thiệu
+  const infoPages = [...new Set([...legalAnchors, ...anchors.filter(a => CONTACT_PAGE.test(a.label)), ...anchors.filter(a => ABOUT_PAGE.test(a.label))].flatMap(a => {
+    try {
+      const u = new URL(a.href, pageUrl);
+      return ownerDomainOf(u.href, pageUrl) === ownerDomain && u.href.split('#')[0] !== pageUrl.split('#')[0] ? [u.href.split('#')[0]] : [];
+    } catch {
+      return [];
+    }
+  }))].slice(0, 3);
   const nullLinks = hrefs.filter(h => h === '' || h === '#' || /^javascript:/i.test(h)).length;
   const linkDomains = hrefs.map(h => ownerDomainOf(h, pageUrl)).filter((d): d is string => !!d);
   const externalLinks = linkDomains.filter(d => d !== ownerDomain).length;
@@ -421,6 +460,12 @@ export function analyzeHtml(html: string, pageUrl: string, ownerDomain: string):
     taxId: /(?:mã số thuế|mst|mã số doanh nghiệp|gpkd|giấy chứng nhận đăng ký (?:doanh nghiệp|kinh doanh)|tax id|company registration)[^0-9]{0,40}\d{9,13}/i.test(text),
     contactInfo: /(?:\+84|\b0)[1-9](?:[\s.-]?\d){8}\b|hotline|[\w.+-]+@[\w-]+\.[\w.]+/i.test(text),
     policyLinks: /privacy|chính sách bảo mật|chính sách quyền riêng tư|terms of (?:service|use)|điều khoản (?:sử dụng|dịch vụ)/i.test(`${text} ${hrefs.join(' ')}`),
+    contactDetails: CONTACT_DETAILS.test(text) || CONTACT_LINK.test(html),
+    legalId: LEGAL_ID.test(text),
+    legalPageLink: legalAnchors.length > 0,
+    // Giỏ hàng của theme WooCommerce/Shopify hay nằm trong thuộc tính title/aria-label, không có trong nội dung chữ
+    germanShop: GERMAN_SHOP.test(`${title} ${text}`) || (/<html\b[^>]*\blang\s*=\s*["']?de\b/i.test(html) && /warenkorb|zur kasse/i.test(html)),
+    infoPages,
     brandMentions,
     credentialPrompt: /\b(?:sign in|log ?in|verify your|confirm your|account (?:suspended|locked|limited)|unusual activity|đăng nhập|xác minh tài khoản|xác thực tài khoản|tài khoản (?:bị|đã bị) (?:khóa|tạm khóa)|cập nhật thông tin)\b/i.test(lowerText),
     botChallenge: /just a moment|attention required|checking your browser|cf-browser-verification|ddos-guard|client challenge|verify you are human|enable javascript and cookies to continue/i.test(`${title} ${text.slice(0, 500)}`),
@@ -454,6 +499,7 @@ export function createEvidence(targetUrl: string): SiteEvidence {
     finalUrlModelProbability: null,
     domainAge: { registeredAt: null, ageDays: null, registrar: null },
     threatListings: checkThreatFeeds(domain.host, domain.ownerDomain, targetUrl),
+    shopPages: null,
     collectedMs: 0,
   };
 }
@@ -543,6 +589,7 @@ export async function collectPageEvidence(evidence: SiteEvidence): Promise<void>
     const contentType = res.headers.get('content-type') || '';
     if (!contentType || /html|xml|text/i.test(contentType)) {
       evidence.html = analyzeHtml(res.body, res.finalUrl, (evidence.finalDomain || domain).ownerDomain);
+      if (needsShopPages(evidence)) evidence.shopPages = await collectShopPages(evidence.html, (evidence.finalDomain || domain).ownerDomain);
     }
   } else {
     if (page.reason instanceof BlockedTargetError) {
@@ -563,6 +610,31 @@ export async function collectPageEvidence(evidence: SiteEvidence): Promise<void>
 
   evidence.threatListings = [...new Set(evidence.threatListings)];
   evidence.collectedMs += Date.now() - started;
+}
+
+// Shop lừa đảo hay để trang liên hệ chỉ có form, không có điện thoại/email/thông tin doanh nghiệp.
+// Chỉ đọc thêm trang phụ với shop chưa lâu năm và chưa có số đăng ký doanh nghiệp trên trang chủ.
+function needsShopPages(e: SiteEvidence): boolean {
+  const html = e.html;
+  if (!html || !html.infoPages.length || html.legalId || html.taxId || html.moitBadge) return false;
+  if (e.domainAge.ageDays !== null && e.domainAge.ageDays >= 2 * 365) return false;
+  if (e.popularityRank !== null && e.popularityRank <= 100_000) return false;
+  return isShopPage(html.title, html.text);
+}
+
+async function collectShopPages(html: HtmlEvidence, ownerDomain: string): Promise<ShopPagesEvidence> {
+  const result: ShopPagesEvidence = { checked: 0, contact: html.contactDetails || html.contactInfo, legalId: false };
+  const pages = await Promise.allSettled(html.infoPages.slice(0, 2).map(url =>
+    safeFetch(url, { timeoutMs: 4000, maxBytes: 512 * 1024, headers: BROWSER_HEADERS })));
+  for (const page of pages) {
+    if (page.status !== 'fulfilled' || page.value.status >= 400 || ownerDomainOf(page.value.finalUrl, page.value.finalUrl) !== ownerDomain) continue;
+    const body = page.value.body;
+    const text = htmlToMarkdown(body);
+    result.checked++;
+    result.contact ||= CONTACT_DETAILS.test(text) || CONTACT_LINK.test(body);
+    result.legalId ||= LEGAL_ID.test(text) || /online\.gov\.vn/i.test(body);
+  }
+  return result;
 }
 
 /** Thu thập toàn bộ bằng chứng một lượt (Tầng 0 -> 2, không dừng sớm). Dùng cho script đánh giá/huấn luyện. */
