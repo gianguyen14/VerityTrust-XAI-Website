@@ -14,7 +14,8 @@
     "eval:a": "tsx scripts/eval-accuracy.ts --dataset eval/datasets/set-a-legit-gambling.json --phishing-file eval/datasets/set-a-phishing-openphish.txt --phishing 120 --seed 3 --concurrency 5 --out eval/results/set-a.json",
     "eval:b": "tsx scripts/eval-accuracy.ts --dataset eval/datasets/set-b-legit-gambling.json --phishing-file eval/datasets/set-b-phishing.txt --phishing 1000 --concurrency 5 --out eval/results/set-b.json",
     "eval:c": "tsx scripts/eval-accuracy.ts --dataset eval/datasets/set-c-legit-gambling.json --phishing-file eval/datasets/set-c-phishing.txt --phishing 1000 --concurrency 4 --out eval/results/set-c.json",
-    "eval:metrics": "tsx scripts/eval-metrics.ts eval/results/set-a.json eval/results/set-b.json eval/results/set-c.json"
+    "eval:d": "tsx scripts/eval-accuracy.ts --dataset eval/datasets/set-d-legit-gambling.json --phishing-file eval/datasets/set-d-phishing.txt --phishing 1000 --concurrency 2 --out eval/results/set-d.json",
+    "eval:metrics": "tsx scripts/eval-metrics.ts eval/results/set-a.json eval/results/set-b.json eval/results/set-c.json eval/results/set-d.json"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

@@ -6,14 +6,14 @@
 
 Phát hiện web lừa đảo (phishing), giả mạo ngân hàng/thương hiệu, cờ bạc trá hình — chạy hoàn toàn trên máy của bạn, không bắt buộc API key.
 
-![Accuracy](https://img.shields.io/badge/Accuracy-95.8%25-brightgreen)
-![F1](https://img.shields.io/badge/F1-95.8%25-brightgreen)
+![Accuracy](https://img.shields.io/badge/Accuracy-96.1%25-brightgreen)
+![F1](https://img.shields.io/badge/F1-96.4%25-brightgreen)
 ![AUC](https://img.shields.io/badge/AUC--ROC-98.9%25-brightgreen)
-![FPR](https://img.shields.io/badge/B%C3%A1o%20nh%E1%BA%A7m-2.9%25-blue)
+![FPR](https://img.shields.io/badge/B%C3%A1o%20nh%E1%BA%A7m-2.7%25-blue)
 ![Node](https://img.shields.io/badge/Node.js-%E2%89%A518-339933?logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 
-*Đo trên 1.367 website thật đang hoạt động — [xem cách đo](docs/DANH-GIA.md)*
+*Đo trên 1.647 website thật đang hoạt động — [xem cách đo](docs/DANH-GIA.md)*
 
 </div>
 
@@ -43,17 +43,17 @@ Phát hiện web lừa đảo (phishing), giả mạo ngân hàng/thương hiệ
 
 ## Độ chính xác
 
-Đo trên **1.367 website thật, đang hoạt động** (628 hợp pháp · 343 lừa đảo · 396 cờ bạc, gồm 3 tập A/B/C), với tra cứu danh sách đen **tắt**, tức hệ thống phải tự phát hiện. Trong ngoặc vuông là khoảng tin cậy 95%.
+Đo trên **1.647 website thật, đang hoạt động** (748 hợp pháp · 375 lừa đảo · 524 cờ bạc, gồm 4 tập A/B/C/D), với tra cứu danh sách đen **tắt**, tức hệ thống phải tự phát hiện. Trong ngoặc vuông là khoảng tin cậy 95%.
 
 | Chỉ số | Kết quả | Ý nghĩa |
 |---|---|---|
-| **Accuracy** | **95,54%** [94,4 – 96,6] | Tỷ lệ đoán đúng trên tổng số web |
-| **Precision** | **97,48%** [96,2 – 98,6] | Khi Verity báo "nguy hiểm", 97,5% trường hợp là nguy hiểm thật |
-| **Recall** | **94,18%** [92,4 – 95,8] | Bắt được 94,2% số web nguy hiểm |
-| **F1-Score** | **95,80%** [94,7 – 96,8] | Cân bằng giữa Precision và Recall |
-| **AUC-ROC** | **98,66%** [98,0 – 99,2] | Khả năng phân biệt web tốt/xấu, không phụ thuộc ngưỡng |
-| **FPR** | **2,87%** [1,6 – 4,3] | Tỷ lệ web hợp pháp bị báo nhầm |
-| **MCC** | **91,10%** | Chỉ số tổng hợp, phạt cả báo nhầm lẫn bỏ sót |
+| **Accuracy** | **96,11%** [95,2 – 97,0] | Tỷ lệ đoán đúng trên tổng số web |
+| **Precision** | **97,71%** [96,7 – 98,6] | Khi Verity báo "nguy hiểm", 97,7% trường hợp là nguy hiểm thật |
+| **Recall** | **95,11%** [93,7 – 96,5] | Bắt được 95,1% số web nguy hiểm |
+| **F1-Score** | **96,39%** [95,5 – 97,3] | Cân bằng giữa Precision và Recall |
+| **AUC-ROC** | **98,89%** [98,4 – 99,3] | Khả năng phân biệt web tốt/xấu, không phụ thuộc ngưỡng |
+| **FPR** | **2,67%** [1,6 – 3,9] | Tỷ lệ web hợp pháp bị báo nhầm |
+| **MCC** | **92,22%** | Chỉ số tổng hợp, phạt cả báo nhầm lẫn bỏ sót |
 
 Toàn bộ dữ liệu đo, kết quả từng web và script tính chỉ số đều nằm trong repo: [`eval/`](eval/). Chi tiết theo từng tập, điểm yếu và cách tự đo lại: **[docs/DANH-GIA.md](docs/DANH-GIA.md)**.
 
@@ -141,7 +141,7 @@ Toàn bộ biến cấu hình (tắt/bật từng nguồn dữ liệu, trình du
 | `npm run build` | Build giao diện cho production |
 | `npm test` | Chạy bộ kiểm thử engine (favicon, chấm điểm, khiên doanh nghiệp…) |
 | `npm run lint` | Kiểm tra kiểu TypeScript |
-| `npm run eval:a` / `npm run eval:b` | Đo độ chính xác trên tập A / tập B (cần máy chủ đang chạy, xem bên dưới) |
+| `npm run eval:a` … `npm run eval:d` | Đo độ chính xác trên tập A, B, C, D (cần máy chủ đang chạy, xem bên dưới) |
 | `npm run eval:metrics` | Tính Accuracy, Precision, Recall, F1, AUC, FPR, MCC từ kết quả đã đo |
 
 Tự đo lại độ chính xác:

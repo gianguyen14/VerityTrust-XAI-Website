@@ -6,25 +6,27 @@ Tài liệu này trả lời ba câu hỏi: **Verity chính xác đến đâu? �
 
 ## Kết quả tổng hợp
 
-Đo trên **1.367 website thật, đang hoạt động**, chia thành 3 tập. Lúc đo, tra cứu danh sách đen bị **tắt** (`THREAT_FEEDS=off`), để hệ thống không "tra đáp án" từ chính nguồn dùng làm đề mà phải tự phát hiện từ bằng chứng. Trong ngoặc vuông là khoảng tin cậy 95% (bootstrap 2.000 lần).
+Đo ngày 10/11/2026 trên **1.647 website thật, đang hoạt động**, chia thành 4 tập (6 web không truy cập được lúc đo nên không tính). Lúc đo, tra cứu danh sách đen bị **tắt** (`THREAT_FEEDS=off`), để hệ thống không "tra đáp án" từ chính nguồn dùng làm đề mà phải tự phát hiện từ bằng chứng. Trong ngoặc vuông là khoảng tin cậy 95% (bootstrap 2.000 lần).
 
 **Quy ước:** *dương tính* = web nguy hiểm (lừa đảo hoặc cờ bạc); hệ thống kết luận "nguy hiểm" khi **điểm < 50**.
 
 | | Dự đoán nguy hiểm | Dự đoán không nguy hiểm |
 |---|---|---|
-| **Thực tế nguy hiểm (739)** | ✅ TP = 696 | ❌ FN = 43 (bỏ sót) |
-| **Thực tế hợp pháp (628)** | ❌ FP = 18 (báo nhầm) | ✅ TN = 610 |
+| **Thực tế nguy hiểm (899)** | ✅ TP = 855 | ❌ FN = 44 (bỏ sót) |
+| **Thực tế hợp pháp (748)** | ❌ FP = 20 (báo nhầm) | ✅ TN = 728 |
 
-| Chỉ số | Gộp (1.367) | Tập A (358) | Tập B (695) | Tập C (314) |
-|---|---|---|---|---|
-| **Accuracy** | **95,54%** [94,4 – 96,6] | 98,60% | 94,39% | 94,59% |
-| **Precision** | **97,48%** [96,2 – 98,6] | 100,00% | 95,92% | 98,48% |
-| **Recall (TPR)** | **94,18%** [92,4 – 95,8] | 96,73% | 93,63% | 93,30% |
-| **F1-Score** | **95,80%** [94,7 – 96,8] | 98,34% | 94,77% | 95,82% |
-| **AUC-ROC** | **98,66%** [98,0 – 99,2] | 99,97% | 98,11% | 98,43% |
-| **FPR** | **2,87%** [1,6 – 4,3] | 0,00% | 4,72% | 2,86% |
-| **Specificity** | 97,13% | 100,00% | 95,28% | 97,14% |
-| **MCC** | 91,10% | 97,17% | 88,75% | 88,41% |
+| Chỉ số | Gộp (1.647) | Tập A (358) | Tập B (690) | Tập C (314) | Tập D (285) |
+|---|---|---|---|---|---|
+| **Accuracy** | **96,11%** [95,2 – 97,0] | 98,60% | 95,36% | 96,50% | 94,39% |
+| **Precision** | **97,71%** [96,7 – 98,6] | 100,00% | 95,48% | 99,01% | 99,33% |
+| **Recall (TPR)** | **95,11%** [93,7 – 96,5] | 96,73% | 95,99% | 95,69% | 90,80% |
+| **F1-Score** | **96,39%** [95,5 – 97,3] | 98,34% | 95,73% | 97,32% | 94,87% |
+| **AUC-ROC** | **98,89%** [98,4 – 99,3] | 99,97% | 98,20% | 99,07% | 98,84% |
+| **FPR** | **2,67%** [1,6 – 3,9] | 0,00% | 5,38% | 1,90% | 0,82% |
+| **Specificity** | 97,33% | 100,00% | 94,62% | 98,10% | 99,18% |
+| **MCC** | 92,22% | 97,17% | 90,66% | 92,37% | 89,13% |
+
+**Tập D phản ánh thực tế sát nhất:** nó được tạo sau khi các luật và mô hình đã gần hoàn chỉnh, và chứa 22 shop/sàn đầu tư giả, nhóm khó nhất. Recall thấp hơn (90,8%) chủ yếu vì các shop giả này.
 
 ### Các chỉ số nghĩa là gì?
 
@@ -44,18 +46,13 @@ Bỏ sót gần như không còn, đổi lại nhiều web hợp pháp ít phổ
 
 | Accuracy | Precision | Recall | F1 | FPR |
 |---|---|---|---|---|
-| 92,68% | 89,30% | **98,24%** | 93,56% | 13,85% |
+| 92,59% | 88,97% | **98,67%** | 93,57% | 14,71% |
 
-Nói cách khác: chỉ **13/739** web nguy hiểm (1,8%) bị xếp nhầm vào mức "An toàn".
-
----|---|---|---|---|
-| 92,50% | 87,90% | **98,68%** | 92,98% | 13,77% |
-
-Nói cách khác: chỉ **7/530** web nguy hiểm (1,3%) bị xếp nhầm vào mức "An toàn".
+Nói cách khác: chỉ **12/899** web nguy hiểm (1,3%) bị xếp nhầm vào mức "An toàn".
 
 ---
 
-## Hai tập dữ liệu
+## Bốn tập dữ liệu
 
 Mọi file nằm trong [`eval/`](../eval/README.md).
 
@@ -92,15 +89,26 @@ Mọi file nằm trong [`eval/`](../eval/README.md).
 - Trong 297 trang lừa đảo còn sống, chỉ giữ 38 trang có dấu hiệu rõ ràng: form đăng nhập Meta/Instagram/Google/Coinbase giả, trang nhập seed phrase, Ledger/Trezor giả, Allegro giả, Roblox giả, thông báo thuế giả.
 - **Bỏ khỏi tập:** khoảng 60 trang `*-whatsapp.com` chỉ hiện bản sao Yahoo/Bing (che giấu nội dung thật), blog Blogspot cũ chỉ mang tên "facebook", đồ án clone trên GitHub, trang mô phỏng phishing để đào tạo nhân viên, trang chết, trang đỗ tên miền.
 
+### Tập D — 286 web (mẫu mới, gán nhãn thủ công ngày 09/11/2026)
+
+| Nhóm | Số lượng | Nguồn |
+|---|---|---|
+| Hợp pháp | 122 | Chọn ngẫu nhiên từ Tranco thứ hạng 10.000–1.000.000 |
+| Cờ bạc | 132 | [hagezi gambling list](https://github.com/hagezi/dns-blocklists) |
+| Lừa đảo | 32 | 10 trang từ OpenPhish/phishunt.io, cộng 22 shop giả và sàn đầu tư giả từ các blocklist web bán hàng lừa đảo |
+
+- **Không trùng tên miền nào** với tập A/B/C, dữ liệu huấn luyện hay danh sách 1.697 tên miền cờ bạc đã rà soát thủ công trong Tranco.
+- **Về độ "sạch" của số đo tập D:** luật "shop không minh bạch" (shop mới, trang chủ không có thông tin liên hệ) được viết sau khi xem các shop giả bị bỏ sót trên tập D, nên số đo tập D hơi lạc quan. Trước khi thêm luật: Accuracy 92,66%, Recall 87,80%. Trên tập A, B, C luật chỉ kích hoạt 1 lần, và lần đó là báo nhầm.
+
 ---
 
 ## Điểm yếu đã biết
 
-Những ca Verity còn sai, rút từ tập B:
+Những ca Verity còn sai, rút từ tập B, C và D:
 
 | Loại | Ví dụ | Vì sao khó |
 |---|---|---|
-| **Lừa đảo bán hàng / đầu tư không có form đăng nhập** | Shop súng giả (85 điểm), sàn đầu tư AI (82), đại lý vé giả mạo Vietnam Airlines (98), web bán bằng giả | Không có ô mật khẩu, không giả thương hiệu trên tên miền; trông như một shop bình thường |
+| **Lừa đảo bán hàng / đầu tư không có form đăng nhập** | Shop súng giả (85 điểm), sàn đầu tư AI (82), đại lý vé giả mạo Vietnam Airlines (98), web bán bằng giả | Không có ô mật khẩu, không giả thương hiệu trên tên miền; trông như một shop bình thường. Trên tập D mới bắt được 12/22 |
 | **Cờ bạc bằng ngôn ngữ ít gặp** | Trang cá cược tiếng Thái, Thổ Nhĩ Kỳ, Ba Tư, Indonesia | Từ khoá cờ bạc chủ yếu là tiếng Việt và tiếng Anh; chỉ bị xếp "Cảnh báo" (52–74) |
 | **Web hợp pháp có tên thương hiệu trong tên miền** | `whatsapp-fast.vercel.app`, `netflixvoid.org`, `googleapps.lk` | Trông y hệt kỹ thuật mạo danh phổ biến nhất |
 | **Tên miền cũ bị mua lại làm cờ bạc** | `stampinmagic.com` (95 điểm), `mobileslotsite.co.uk` (96), `black-satta.com` (100) — tập C | Tên miền lâu năm, vẫn còn trong Tranco nên được cộng điểm độ phổ biến |
@@ -159,7 +167,7 @@ Phân tích lại: `python3 scripts/analyze-jev-v3.py eval/results/set-b-verityt
 THREAT_FEEDS=off RATE_LIMIT_PER_MIN=0 npm run dev
 ```
 
-**2. Mở terminal khác, chạy hai tập** (mất khoảng 3–6 phút mỗi tập):
+**2. Mở terminal khác, chạy bốn tập** (mất khoảng 3–6 phút mỗi tập):
 
 ```bash
 npm run eval:a
@@ -167,6 +175,14 @@ npm run eval:a
 
 ```bash
 npm run eval:b
+```
+
+```bash
+npm run eval:c
+```
+
+```bash
+npm run eval:d
 ```
 
 **3. Tính chỉ số:**
@@ -178,6 +194,7 @@ npm run eval:metrics
 Muốn tính cho một tập riêng: `npx tsx scripts/eval-metrics.ts eval/results/set-b.json`.
 
 > ⚠️ **Lưu ý:**
+> - Máy yếu (RAM 8 GB) nên đo lần lượt từng tập và giảm `--concurrency` xuống 2: quét song song nhiều web có thể làm máy treo.
 > - Web thật thay đổi theo thời gian: trang lừa đảo bị gỡ, web hợp pháp đổi giao diện. Kết quả đo lại sẽ chênh lệch vài phần trăm so với số ở trên; phần lớn chênh lệch đến từ trang đã chết.
 > - Khi đo, máy chủ **sẽ tải HTML của các trang lừa đảo thật**. Hệ thống không chạy JavaScript của trang ở Tầng 2, nhưng vẫn nên chạy trong môi trường bạn chấp nhận được.
 

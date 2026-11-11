@@ -29,10 +29,10 @@ Thư mục này chứa **toàn bộ dữ liệu kiểm thử** dùng để đo �
 
 | File | Mô tả |
 |---|---|
-| `set-a.json` | Kết quả của bản hiện tại trên tập A |
+| `set-a.json` | Kết quả của bản hiện tại trên tập A; mọi file `set-*.json` đo ngày 10/11/2026 và có trường `factors` (bằng chứng từng web) |
 | `set-b.json` | Kết quả của bản hiện tại trên tập B |
 | `set-c.json` | Kết quả của bản hiện tại trên tập C |
-| `set-d.json` | Kết quả trên tập D, kèm trường `factors` (bằng chứng từng web) |
+| `set-d.json` | Kết quả của bản hiện tại trên tập D |
 | `set-b-veritytrust-engine-v2.json`, `set-b-veritytrust-engine-v3.json` | Tập B chạy kèm VerityTrust Decision Engine ở chế độ chạy ngầm; trường `jev` chứa câu trả lời của engine cho từng web |
 | `set-b-before-brand-fix.json` | Kết quả trên tập B **trước** khi sửa luật giả danh thương hiệu, tức số đo chưa tinh chỉnh |
 
@@ -54,5 +54,5 @@ THREAT_FEEDS=off RATE_LIMIT_PER_MIN=0 npm run dev
 ```
 
 ```bash
-npm run eval:a && npm run eval:b && npm run eval:c && npm run eval:metrics
+npm run eval:a && npm run eval:b && npm run eval:c && npm run eval:d && npm run eval:metrics
 ```

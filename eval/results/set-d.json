@@ -1,12 +1,12 @@
 [
   {
-    "url": "hotdeal.vn",
+    "url": "phatsuonline.vn",
     "label": "safe",
     "group": "legit",
-    "score": 97,
+    "score": 76,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 86,
+    "ms": 955,
     "factors": [
       [
         "hsts",
@@ -15,25 +15,17 @@
       [
         "tls_valid",
         4
-      ],
-      [
-        "smb_shield",
-        10
-      ],
-      [
-        "transparency",
-        11
       ]
     ]
   },
   {
-    "url": "vikkibanks.vn",
+    "url": "mic.vn",
     "label": "safe",
     "group": "legit",
     "score": 79,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 55,
+    "ms": 957,
     "factors": [
       [
         "hsts",
@@ -50,13 +42,86 @@
     ]
   },
   {
+    "url": "vikkibanks.vn",
+    "label": "safe",
+    "group": "legit",
+    "score": 79,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 971,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "dily.vn",
+    "label": "safe",
+    "group": "legit",
+    "score": 100,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 261,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "smb_shield",
+        10
+      ],
+      [
+        "transparency",
+        15
+      ]
+    ]
+  },
+  {
+    "url": "admicro.vn",
+    "label": "safe",
+    "group": "legit",
+    "score": 91,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 519,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "popularity",
+        14
+      ]
+    ]
+  },
+  {
     "url": "tnd.vn",
     "label": "safe",
     "group": "legit",
     "score": 50,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 56,
+    "ms": 1642,
     "factors": [
       [
         "brand_impersonation",
@@ -81,13 +146,13 @@
     ]
   },
   {
-    "url": "phatsuonline.vn",
+    "url": "hotdeal.vn",
     "label": "safe",
     "group": "legit",
-    "score": 76,
+    "score": 97,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 59,
+    "ms": 1865,
     "factors": [
       [
         "hsts",
@@ -96,22 +161,26 @@
       [
         "tls_valid",
         4
+      ],
+      [
+        "smb_shield",
+        10
+      ],
+      [
+        "transparency",
+        11
       ]
     ]
   },
   {
-    "url": "mic.vn",
+    "url": "fmit.vn",
     "label": "safe",
     "group": "legit",
-    "score": 79,
+    "score": 77,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 59,
+    "ms": 895,
     "factors": [
-      [
-        "hsts",
-        2
-      ],
       [
         "transparency",
         3
@@ -129,7 +198,7 @@
     "score": 76,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 62,
+    "ms": 2230,
     "factors": [
       [
         "hsts",
@@ -142,13 +211,13 @@
     ]
   },
   {
-    "url": "admicro.vn",
+    "url": "coinsutra.com",
     "label": "safe",
     "group": "legit",
-    "score": 91,
+    "score": 89,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
+    "ms": 335,
     "factors": [
       [
         "transparency",
@@ -159,19 +228,46 @@
         4
       ],
       [
-        "popularity",
-        14
+        "domain_age",
+        12
       ]
     ]
   },
   {
-    "url": "fmit.vn",
+    "url": "railwagonlocation.com",
     "label": "safe",
     "group": "legit",
     "score": 77,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 1100,
+    "factors": [
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "caseworthy.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 89,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 769,
     "factors": [
       [
         "transparency",
@@ -180,33 +276,10 @@
       [
         "tls_valid",
         4
-      ]
-    ]
-  },
-  {
-    "url": "dily.vn",
-    "label": "safe",
-    "group": "legit",
-    "score": 100,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
-    "factors": [
-      [
-        "hsts",
-        2
       ],
       [
-        "tls_valid",
-        4
-      ],
-      [
-        "smb_shield",
-        10
-      ],
-      [
-        "transparency",
-        15
+        "domain_age",
+        12
       ]
     ]
   },
@@ -217,7 +290,7 @@
     "score": 86,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 22,
+    "ms": 1612,
     "factors": [
       [
         "fresh_cert",
@@ -242,90 +315,13 @@
     ]
   },
   {
-    "url": "railwagonlocation.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 77,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 20,
-    "factors": [
-      [
-        "password_form",
-        -12
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "penny.it",
-    "label": "safe",
-    "group": "legit",
-    "score": 73,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 20,
-    "factors": [
-      [
-        "fresh_cert",
-        -6
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "caseworthy.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 89,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
     "url": "jameshawk.pl",
     "label": "safe",
     "group": "legit",
     "score": 73,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
+    "ms": 1825,
     "factors": [
       [
         "ml_domain",
@@ -346,86 +342,29 @@
     ]
   },
   {
-    "url": "coinsutra.com",
+    "url": "penny.it",
     "label": "safe",
     "group": "legit",
-    "score": 89,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "gbc.gi",
-    "label": "safe",
-    "group": "legit",
-    "score": 77,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "noavarpub.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 86,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "aci-bd.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 74,
+    "score": 73,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 18,
+    "ms": 2200,
     "factors": [
       [
-        "ml_domain",
-        -12
+        "fresh_cert",
+        -6
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
       ],
       [
         "tls_valid",
         4
-      ],
-      [
-        "domain_age",
-        12
       ]
     ]
   },
@@ -436,7 +375,7 @@
     "score": 55,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 1214,
     "factors": [
       [
         "password_form",
@@ -461,13 +400,55 @@
     ]
   },
   {
+    "url": "aci-bd.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 74,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1638,
+    "factors": [
+      [
+        "ml_domain",
+        -12
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "noavarpub.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 86,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1870,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
     "url": "nfx.cz",
     "label": "safe",
     "group": "legit",
     "score": 96,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 21,
+    "ms": 994,
     "factors": [
       [
         "hsts",
@@ -488,13 +469,13 @@
     ]
   },
   {
-    "url": "nasu-oukoku.com",
+    "url": "gbc.gi",
     "label": "safe",
     "group": "legit",
-    "score": 89,
+    "score": 77,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 23,
+    "ms": 2181,
     "factors": [
       [
         "transparency",
@@ -503,33 +484,6 @@
       [
         "tls_valid",
         4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "coocent.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 89,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
       ]
     ]
   },
@@ -540,7 +494,7 @@
     "score": 51,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 18,
+    "ms": 579,
     "factors": [
       [
         "typosquat",
@@ -565,102 +519,13 @@
     ]
   },
   {
-    "url": "new-harvest.org",
+    "url": "nasu-oukoku.com",
     "label": "safe",
     "group": "legit",
-    "score": 91,
+    "score": 89,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 24,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "sacre-coeur-montmartre.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 82,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 28,
-    "factors": [
-      [
-        "ml_domain",
-        -12
-      ],
-      [
-        "unreachable",
-        0
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "popularity",
-        8
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "sagamitenrei.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 100,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 25,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "smb_shield",
-        10
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "alandstidningen.ax",
-    "label": "safe",
-    "group": "legit",
-    "score": 77,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 23,
+    "ms": 1460,
     "factors": [
       [
         "transparency",
@@ -669,37 +534,29 @@
       [
         "tls_valid",
         4
+      ],
+      [
+        "domain_age",
+        12
       ]
     ]
   },
   {
-    "url": "kswo.com",
+    "url": "coocent.com",
     "label": "safe",
     "group": "legit",
-    "score": 100,
+    "score": 89,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 24,
+    "ms": 1866,
     "factors": [
       [
-        "hsts",
-        2
+        "transparency",
+        3
       ],
       [
         "tls_valid",
         4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "popularity",
-        8
-      ],
-      [
-        "smb_shield",
-        10
       ],
       [
         "domain_age",
@@ -714,7 +571,7 @@
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 24,
+    "ms": 620,
     "factors": [
       [
         "hsts",
@@ -739,14 +596,49 @@
     ]
   },
   {
-    "url": "coredump.cx",
+    "url": "sagamitenrei.com",
     "label": "safe",
     "group": "legit",
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
+    "ms": 2287,
     "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "smb_shield",
+        10
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "new-harvest.org",
+    "label": "safe",
+    "group": "legit",
+    "score": 88,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2627,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
       [
         "tls_valid",
         4
@@ -754,10 +646,6 @@
       [
         "domain_age",
         12
-      ],
-      [
-        "popularity",
-        14
       ]
     ]
   },
@@ -768,7 +656,7 @@
     "score": 84,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 1214,
     "factors": [
       [
         "hsts",
@@ -788,14 +676,141 @@
     "url": "zellwk.com",
     "label": "safe",
     "group": "legit",
-    "score": 86,
+    "score": 88,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 26,
+    "ms": 1432,
     "factors": [
       [
-        "unreachable",
-        0
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "alandstidningen.ax",
+    "label": "safe",
+    "group": "legit",
+    "score": 77,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3895,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "kswo.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 100,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3481,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "popularity",
+        8
+      ],
+      [
+        "smb_shield",
+        10
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "bignetbroadband.net",
+    "label": "safe",
+    "group": "legit",
+    "score": 84,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 443,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "printablepretty.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 79,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 449,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "joseyrecords.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 91,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 667,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
       ],
       [
         "tls_valid",
@@ -814,7 +829,7 @@
     "score": 61,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 29,
+    "ms": 1232,
     "factors": [
       [
         "password_form",
@@ -839,36 +854,13 @@
     ]
   },
   {
-    "url": "bignetbroadband.net",
+    "url": "coredump.cx",
     "label": "safe",
     "group": "legit",
-    "score": 84,
+    "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 28,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "binaryfruit.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 86,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 30,
+    "ms": 3269,
     "factors": [
       [
         "tls_valid",
@@ -877,17 +869,21 @@
       [
         "domain_age",
         12
+      ],
+      [
+        "popularity",
+        14
       ]
     ]
   },
   {
-    "url": "joseyrecords.com",
+    "url": "coresite.com",
     "label": "safe",
     "group": "legit",
     "score": 91,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 29,
+    "ms": 832,
     "factors": [
       [
         "hsts",
@@ -904,29 +900,6 @@
       [
         "domain_age",
         12
-      ]
-    ]
-  },
-  {
-    "url": "printablepretty.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 79,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 26,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
       ]
     ]
   },
@@ -937,7 +910,7 @@
     "score": 98,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 22,
+    "ms": 1159,
     "factors": [
       [
         "hsts",
@@ -958,40 +931,13 @@
     ]
   },
   {
-    "url": "coresite.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 91,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
     "url": "bijouxdemaeva.com",
     "label": "safe",
     "group": "legit",
     "score": 69,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 1197,
     "factors": [
       [
         "domain_age",
@@ -1012,17 +958,55 @@
     ]
   },
   {
-    "url": "intebit.net",
+    "url": "mijnacademie.be",
     "label": "safe",
     "group": "legit",
-    "score": 81,
+    "score": 77,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
+    "ms": 570,
     "factors": [
       [
-        "cross_redirect",
-        -8
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "umaryland.edu",
+    "label": "safe",
+    "group": "legit",
+    "score": 100,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 11,
+    "factors": [
+      [
+        "popularity",
+        14
+      ],
+      [
+        "trusted",
+        20
+      ]
+    ]
+  },
+  {
+    "url": "sacre-coeur-montmartre.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 85,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 6598,
+    "factors": [
+      [
+        "ml_domain",
+        -12
       ],
       [
         "transparency",
@@ -1031,6 +1015,10 @@
       [
         "tls_valid",
         4
+      ],
+      [
+        "popularity",
+        8
       ],
       [
         "domain_age",
@@ -1045,7 +1033,7 @@
     "score": 77,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
+    "ms": 1546,
     "factors": [
       [
         "password_form",
@@ -1066,93 +1054,13 @@
     ]
   },
   {
-    "url": "mijnacademie.be",
-    "label": "safe",
-    "group": "legit",
-    "score": 77,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "umaryland.edu",
-    "label": "safe",
-    "group": "legit",
-    "score": 100,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
-    "factors": [
-      [
-        "popularity",
-        14
-      ],
-      [
-        "trusted",
-        20
-      ]
-    ]
-  },
-  {
-    "url": "beppi.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 86,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 21,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "mhmv.in",
-    "label": "safe",
-    "group": "legit",
-    "score": 90,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "smb_shield",
-        10
-      ]
-    ]
-  },
-  {
     "url": "unchainedcrypto.com",
     "label": "safe",
     "group": "legit",
     "score": 62,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 18,
+    "ms": 588,
     "factors": [
       [
         "wallet_brand",
@@ -1177,17 +1085,59 @@
     ]
   },
   {
-    "url": "foxtucson.com",
+    "url": "erikkes.id",
     "label": "safe",
     "group": "legit",
-    "score": 91,
+    "score": 82,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 20,
+    "ms": 541,
     "factors": [
       [
-        "hsts",
-        2
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "mhmv.in",
+    "label": "safe",
+    "group": "legit",
+    "score": 90,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1311,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "smb_shield",
+        10
+      ]
+    ]
+  },
+  {
+    "url": "intebit.net",
+    "label": "safe",
+    "group": "legit",
+    "score": 81,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3283,
+    "factors": [
+      [
+        "cross_redirect",
+        -8
       ],
       [
         "transparency",
@@ -1204,37 +1154,14 @@
     ]
   },
   {
-    "url": "erikkes.id",
+    "url": "beppi.com",
     "label": "safe",
     "group": "legit",
-    "score": 82,
+    "score": 86,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 13,
+    "ms": 2986,
     "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "alegsaonline.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 89,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
       [
         "tls_valid",
         4
@@ -1252,7 +1179,7 @@
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 1674,
     "factors": [
       [
         "hsts",
@@ -1277,13 +1204,36 @@
     ]
   },
   {
+    "url": "alegsaonline.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 89,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1775,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
     "url": "gisnauka.ru",
     "label": "safe",
     "group": "legit",
     "score": 84,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
+    "ms": 1138,
     "factors": [
       [
         "hsts",
@@ -1300,13 +1250,40 @@
     ]
   },
   {
+    "url": "foxtucson.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 91,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2781,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
     "url": "wingware.com",
     "label": "safe",
     "group": "legit",
     "score": 77,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
+    "ms": 1106,
     "factors": [
       [
         "external_form",
@@ -1331,86 +1308,13 @@
     ]
   },
   {
-    "url": "sarvda.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 87,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "saitas.lt",
-    "label": "safe",
-    "group": "legit",
-    "score": 77,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "weblog-staphorst.nl",
-    "label": "safe",
-    "group": "legit",
-    "score": 100,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "smb_shield",
-        10
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
     "url": "maisondemusk.com",
     "label": "safe",
     "group": "legit",
     "score": 70,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
+    "ms": 437,
     "factors": [
       [
         "password_form",
@@ -1445,8 +1349,131 @@
     "score": 89,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
+    "ms": 488,
     "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "sarvda.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 87,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1424,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "binaryfruit.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 86,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 6923,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "weblog-staphorst.nl",
+    "label": "safe",
+    "group": "legit",
+    "score": 100,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1612,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "smb_shield",
+        10
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "saitas.lt",
+    "label": "safe",
+    "group": "legit",
+    "score": 77,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1863,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "shopalexis.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 83,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 829,
+    "factors": [
+      [
+        "null_links",
+        -8
+      ],
+      [
+        "hsts",
+        2
+      ],
       [
         "transparency",
         3
@@ -1468,96 +1495,11 @@
     "score": 15,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
+    "ms": 1919,
     "factors": [
       [
         "favicon_impersonation",
         -35
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "nativephp.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 78,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
-    "factors": [
-      [
-        "external_form",
-        -20
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "domain_age",
-        8
-      ],
-      [
-        "smb_shield",
-        10
-      ]
-    ]
-  },
-  {
-    "url": "innovazionesigmacoatings.it",
-    "label": "safe",
-    "group": "legit",
-    "score": 90,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "smb_shield",
-        10
-      ]
-    ]
-  },
-  {
-    "url": "shopalexis.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 83,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 14,
-    "factors": [
-      [
-        "null_links",
-        -8
       ],
       [
         "hsts",
@@ -1584,7 +1526,7 @@
     "score": 74,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
+    "ms": 1183,
     "factors": [
       [
         "tls_valid",
@@ -1593,18 +1535,91 @@
     ]
   },
   {
-    "url": "valterraplatinum.com",
+    "url": "nativephp.com",
     "label": "safe",
     "group": "legit",
-    "score": 92,
+    "score": 78,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 14,
+    "ms": 1893,
+    "factors": [
+      [
+        "external_form",
+        -20
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "domain_age",
+        8
+      ],
+      [
+        "smb_shield",
+        10
+      ]
+    ]
+  },
+  {
+    "url": "in3x.org",
+    "label": "safe",
+    "group": "legit",
+    "score": 82,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 562,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "asknebula.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 87,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 475,
     "factors": [
       [
         "hsts",
         2
       ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "innovazionesigmacoatings.it",
+    "label": "safe",
+    "group": "legit",
+    "score": 90,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2098,
+    "factors": [
       [
         "tls_valid",
         4
@@ -1626,7 +1641,7 @@
     "score": 89,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 1959,
     "factors": [
       [
         "transparency",
@@ -1643,28 +1658,13 @@
     ]
   },
   {
-    "url": "alternativ.nu",
+    "url": "gitabase.com",
     "label": "safe",
     "group": "legit",
-    "score": 74,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "in3x.org",
-    "label": "safe",
-    "group": "legit",
-    "score": 82,
+    "score": 86,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
+    "ms": 1205,
     "factors": [
       [
         "tls_valid",
@@ -1672,61 +1672,7 @@
       ],
       [
         "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "asknebula.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 87,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 14,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "stempelpool.de",
-    "label": "safe",
-    "group": "legit",
-    "score": 92,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "smb_shield",
-        10
+        12
       ]
     ]
   },
@@ -1737,7 +1683,7 @@
     "score": 60,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 1381,
     "factors": [
       [
         "obfuscation",
@@ -1762,59 +1708,13 @@
     ]
   },
   {
-    "url": "gitabase.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 86,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 7,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "ankored.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 87,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 8,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
     "url": "faithgateway.com",
     "label": "safe",
     "group": "legit",
     "score": 92,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
+    "ms": 518,
     "factors": [
       [
         "external_form",
@@ -1847,13 +1747,170 @@
     ]
   },
   {
+    "url": "alternativ.nu",
+    "label": "safe",
+    "group": "legit",
+    "score": 74,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2849,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "stempelpool.de",
+    "label": "safe",
+    "group": "legit",
+    "score": 92,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2651,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "smb_shield",
+        10
+      ]
+    ]
+  },
+  {
+    "url": "ankored.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 87,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2016,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "benzest.ru",
+    "label": "safe",
+    "group": "legit",
+    "score": 76,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1459,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "civisanalytics.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 89,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 643,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "yrp24.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 82,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1224,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "valterraplatinum.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 92,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 5860,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "smb_shield",
+        10
+      ]
+    ]
+  },
+  {
     "url": "ssk-cuxhaven.de",
     "label": "safe",
     "group": "legit",
     "score": 64,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
+    "ms": 3622,
     "factors": [
       [
         "external_form",
@@ -1874,14 +1931,18 @@
     ]
   },
   {
-    "url": "benzest.ru",
+    "url": "organicabiotech.com",
     "label": "safe",
     "group": "legit",
-    "score": 76,
+    "score": 84,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 445,
     "factors": [
+      [
+        "external_form",
+        -20
+      ],
       [
         "hsts",
         2
@@ -1889,68 +1950,34 @@
       [
         "tls_valid",
         4
-      ]
-    ]
-  },
-  {
-    "url": "ameritas.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 100,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 24,
-    "factors": [
-      [
-        "hsts",
-        2
       ],
       [
         "transparency",
-        3
+        6
       ],
       [
-        "tls_valid",
-        4
+        "smb_shield",
+        10
       ],
       [
         "domain_age",
         12
-      ],
-      [
-        "popularity",
-        14
       ]
     ]
   },
   {
-    "url": "yrp24.com",
+    "url": "buderus.com",
     "label": "safe",
     "group": "legit",
-    "score": 82,
+    "score": 99,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 24,
+    "ms": 1242,
     "factors": [
       [
-        "tls_valid",
-        4
+        "hsts",
+        2
       ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "civisanalytics.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 89,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 29,
-    "factors": [
       [
         "transparency",
         3
@@ -1958,6 +1985,10 @@
       [
         "tls_valid",
         4
+      ],
+      [
+        "popularity",
+        8
       ],
       [
         "domain_age",
@@ -1972,7 +2003,7 @@
     "score": 90,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 18,
+    "ms": 2603,
     "factors": [
       [
         "hsts",
@@ -1995,7 +2026,7 @@
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 2137,
     "factors": [
       [
         "hsts",
@@ -2016,107 +2047,95 @@
     ]
   },
   {
-    "url": "2moodstore.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 93,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "popularity",
-        8
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "buderus.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 99,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "popularity",
-        8
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "organicabiotech.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 84,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 13,
-    "factors": [
-      [
-        "external_form",
-        -20
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "smb_shield",
-        10
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
     "url": "cyberpower.com",
     "label": "safe",
     "group": "legit",
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
+    "ms": 839,
     "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ],
+      [
+        "popularity",
+        14
+      ]
+    ]
+  },
+  {
+    "url": "myfoodanalysis.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 89,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1277,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "2moodstore.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 93,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3803,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "popularity",
+        8
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "ameritas.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 100,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 5368,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
       [
         "transparency",
         3
@@ -2142,7 +2161,7 @@
     "score": 90,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
+    "ms": 2209,
     "factors": [
       [
         "hsts",
@@ -2159,86 +2178,13 @@
     ]
   },
   {
-    "url": "myfoodanalysis.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 89,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "puravia.cz",
-    "label": "safe",
-    "group": "legit",
-    "score": 86,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 14,
-    "factors": [
-      [
-        "password_form",
-        -12
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "domain_age",
-        8
-      ],
-      [
-        "smb_shield",
-        10
-      ]
-    ]
-  },
-  {
-    "url": "hardmt2.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 82,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
     "url": "thepotteries.org",
     "label": "safe",
     "group": "legit",
     "score": 86,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 8,
+    "ms": 667,
     "factors": [
       [
         "tls_valid",
@@ -2257,7 +2203,7 @@
     "score": 80,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 932,
     "factors": [
       [
         "null_links",
@@ -2278,13 +2224,32 @@
     ]
   },
   {
+    "url": "kasaed.net",
+    "label": "safe",
+    "group": "legit",
+    "score": 86,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 830,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
     "url": "gwcwarranty.com",
     "label": "safe",
     "group": "legit",
     "score": 89,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 1505,
     "factors": [
       [
         "transparency",
@@ -2307,7 +2272,7 @@
     "score": 83,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 13,
+    "ms": 1545,
     "factors": [
       [
         "cross_redirect",
@@ -2338,7 +2303,7 @@
     "score": 69,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
+    "ms": 2047,
     "factors": [
       [
         "external_form",
@@ -2359,63 +2324,13 @@
     ]
   },
   {
-    "url": "kasaed.net",
-    "label": "safe",
-    "group": "legit",
-    "score": 86,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "libax.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 100,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ],
-      [
-        "smb_shield",
-        10
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
     "url": "anandb.dev",
     "label": "safe",
     "group": "legit",
     "score": 92,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
+    "ms": 790,
     "factors": [
       [
         "hsts",
@@ -2442,7 +2357,7 @@
     "score": 92,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
+    "ms": 732,
     "factors": [
       [
         "hsts",
@@ -2463,13 +2378,117 @@
     ]
   },
   {
+    "url": "puravia.cz",
+    "label": "safe",
+    "group": "legit",
+    "score": 86,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3961,
+    "factors": [
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "domain_age",
+        8
+      ],
+      [
+        "smb_shield",
+        10
+      ]
+    ]
+  },
+  {
+    "url": "libax.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 100,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2067,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ],
+      [
+        "smb_shield",
+        10
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "cloudcom.ru",
+    "label": "safe",
+    "group": "legit",
+    "score": 85,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1120,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "popularity",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "hardmt2.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 82,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 4964,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
     "url": "lackstift24.de",
     "label": "safe",
     "group": "legit",
     "score": 72,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 1610,
     "factors": [
       [
         "password_form",
@@ -2494,13 +2513,32 @@
     ]
   },
   {
-    "url": "cloudcom.ru",
+    "url": "manuelsweb.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 86,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2014,
+    "factors": [
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "josenaranjo.dev",
     "label": "safe",
     "group": "legit",
     "score": 85,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 8,
+    "ms": 1807,
     "factors": [
       [
         "transparency",
@@ -2511,27 +2549,8 @@
         4
       ],
       [
-        "popularity",
+        "domain_age",
         8
-      ]
-    ]
-  },
-  {
-    "url": "yunbak.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 53,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 8,
-    "factors": [
-      [
-        "tls_invalid",
-        -20
-      ],
-      [
-        "transparency",
-        3
       ]
     ]
   },
@@ -2542,7 +2561,7 @@
     "score": 69,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 2919,
     "factors": [
       [
         "login_path",
@@ -2565,7 +2584,7 @@
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 2313,
     "factors": [
       [
         "tls_valid",
@@ -2586,105 +2605,13 @@
     ]
   },
   {
-    "url": "manuelsweb.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 86,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 8,
-    "factors": [
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "josenaranjo.dev",
-    "label": "safe",
-    "group": "legit",
-    "score": 85,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 8,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "lug-info.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 57,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
-    "factors": [
-      [
-        "tls_invalid",
-        -20
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "mainfin.ru",
-    "label": "safe",
-    "group": "legit",
-    "score": 85,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "popularity",
-        8
-      ]
-    ]
-  },
-  {
     "url": "musthavemods.com",
     "label": "safe",
     "group": "legit",
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 948,
     "factors": [
       [
         "hsts",
@@ -2715,11 +2642,180 @@
     "score": 76,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
+    "ms": 1036,
     "factors": [
       [
         "hsts",
         2
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "hahow.in",
+    "label": "safe",
+    "group": "legit",
+    "score": 88,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 447,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "lug-info.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 57,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3063,
+    "factors": [
+      [
+        "tls_invalid",
+        -20
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "tinytapeout.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 65,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 321,
+    "factors": [
+      [
+        "external_form",
+        -20
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "mainfin.ru",
+    "label": "safe",
+    "group": "legit",
+    "score": 85,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1989,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "popularity",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "discoversouthcarolina.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 97,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1412,
+    "factors": [
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "popularity",
+        8
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "yunbak.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 53,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 5624,
+    "factors": [
+      [
+        "tls_invalid",
+        -20
+      ],
+      [
+        "transparency",
+        3
+      ]
+    ]
+  },
+  {
+    "url": "boplus.kz",
+    "label": "safe",
+    "group": "legit",
+    "score": 71,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1213,
+    "factors": [
+      [
+        "fresh_cert",
+        -6
+      ],
+      [
+        "transparency",
+        3
       ],
       [
         "tls_valid",
@@ -2734,7 +2830,7 @@
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 2863,
     "factors": [
       [
         "hsts",
@@ -2759,36 +2855,13 @@
     ]
   },
   {
-    "url": "hahow.in",
+    "url": "alertcalifornia.org",
     "label": "safe",
     "group": "legit",
-    "score": 88,
+    "score": 93,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "discoversouthcarolina.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 97,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
+    "ms": 1417,
     "factors": [
       [
         "transparency",
@@ -2801,56 +2874,6 @@
       [
         "popularity",
         8
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "boplus.kz",
-    "label": "safe",
-    "group": "legit",
-    "score": 71,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
-    "factors": [
-      [
-        "fresh_cert",
-        -6
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "tinytapeout.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 65,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
-    "factors": [
-      [
-        "external_form",
-        -20
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
       ],
       [
         "domain_age",
@@ -2862,18 +2885,18 @@
     "url": "ramsaysante.fr",
     "label": "safe",
     "group": "legit",
-    "score": 96,
+    "score": 82,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
+    "ms": 1335,
     "factors": [
+      [
+        "tls_invalid",
+        -10
+      ],
       [
         "hsts",
         2
-      ],
-      [
-        "tls_valid",
-        4
       ],
       [
         "popularity",
@@ -2882,64 +2905,6 @@
       [
         "domain_age",
         12
-      ]
-    ]
-  },
-  {
-    "url": "alertcalifornia.org",
-    "label": "safe",
-    "group": "legit",
-    "score": 93,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "popularity",
-        8
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "loombard.pl",
-    "label": "safe",
-    "group": "legit",
-    "score": 100,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ],
-      [
-        "popularity",
-        14
       ]
     ]
   },
@@ -2950,7 +2915,7 @@
     "score": 100,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 7,
+    "ms": 1179,
     "factors": [
       [
         "hsts",
@@ -2971,52 +2936,6 @@
       [
         "popularity",
         14
-      ]
-    ]
-  },
-  {
-    "url": "republicahosting.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 85,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 11,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "camelcom.hu",
-    "label": "safe",
-    "group": "legit",
-    "score": 69,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
-    "factors": [
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
       ]
     ]
   },
@@ -3027,62 +2946,8 @@
     "score": 77,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
+    "ms": 954,
     "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "universalmusic.com",
-    "label": "safe",
-    "group": "legit",
-    "score": 100,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ],
-      [
-        "popularity",
-        14
-      ]
-    ]
-  },
-  {
-    "url": "mbs-service.de",
-    "label": "safe",
-    "group": "legit",
-    "score": 79,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 18,
-    "factors": [
-      [
-        "hsts",
-        2
-      ],
       [
         "transparency",
         3
@@ -3100,7 +2965,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 18,
+    "ms": 90,
     "factors": [
       [
         "gambling",
@@ -3109,21 +2974,56 @@
     ]
   },
   {
-    "url": "kh1ads.site",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 59,
-    "status": "Warning",
+    "url": "republicahosting.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 85,
+    "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
+    "ms": 2205,
     "factors": [
       [
-        "random_label",
-        -15
+        "transparency",
+        3
       ],
       [
         "tls_valid",
         4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "loombard.pl",
+    "label": "safe",
+    "group": "legit",
+    "score": 100,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2586,
+    "factors": [
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ],
+      [
+        "popularity",
+        14
       ]
     ]
   },
@@ -3134,7 +3034,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
+    "ms": 806,
     "factors": [
       [
         "gambling",
@@ -3169,7 +3069,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
+    "ms": 1512,
     "factors": [
       [
         "gambling",
@@ -3184,7 +3084,7 @@
     "score": 9,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 14,
+    "ms": 2213,
     "factors": [
       [
         "numeric_domain",
@@ -3219,22 +3119,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "qzinocasinos.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 203,
     "factors": [
       [
         "gambling",
@@ -3249,11 +3134,49 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 106,
     "factors": [
       [
         "gambling",
         -60
+      ]
+    ]
+  },
+  {
+    "url": "qzinocasinos.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 262,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "camelcom.hu",
+    "label": "safe",
+    "group": "legit",
+    "score": 69,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 4672,
+    "factors": [
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
       ]
     ]
   },
@@ -3264,7 +3187,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
+    "ms": 327,
     "factors": [
       [
         "gambling",
@@ -3279,7 +3202,7 @@
     "score": 5,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
+    "ms": 334,
     "factors": [
       [
         "domain_age",
@@ -3304,17 +3227,21 @@
     ]
   },
   {
-    "url": "sendmad.org",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 52,
-    "status": "Warning",
+    "url": "mbs-service.de",
+    "label": "safe",
+    "group": "legit",
+    "score": 79,
+    "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
+    "ms": 4154,
     "factors": [
       [
-        "domain_age",
-        -22
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
       ],
       [
         "tls_valid",
@@ -3329,7 +3256,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
+    "ms": 100,
     "factors": [
       [
         "gambling",
@@ -3348,7 +3275,71 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
+    "ms": 173,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "slot-king88.xyz",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 167,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "risky_tld",
+        -12
+      ]
+    ]
+  },
+  {
+    "url": "true-fortune-casino2.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 259,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "casinosestrangeiros.pt",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 177,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "faro-casino10.online",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 22,
     "factors": [
       [
         "gambling",
@@ -3363,7 +3354,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 483,
     "factors": [
       [
         "gambling",
@@ -3376,128 +3367,6 @@
       [
         "random_label",
         -15
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "slot-king88.xyz",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "risky_tld",
-        -12
-      ]
-    ]
-  },
-  {
-    "url": "casinosestrangeiros.pt",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 9,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "true-fortune-casino2.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "winwin-om.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 9,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 13,
-    "factors": [
-      [
-        "favicon_impersonation",
-        -35
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "ml_content",
-        -8
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "faro-casino10.online",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "mebel-nasha-fabrika.ru",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "ml_content",
-        -8
       ],
       [
         "hsts",
@@ -3520,7 +3389,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 115,
     "factors": [
       [
         "gambling",
@@ -3539,7 +3408,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 197,
     "factors": [
       [
         "gambling",
@@ -3554,7 +3423,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
+    "ms": 104,
     "factors": [
       [
         "gambling",
@@ -3569,37 +3438,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "dicepalacecasino.lt",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 7,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "1xbetdeposit.cam",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 9,
+    "ms": 214,
     "factors": [
       [
         "gambling",
@@ -3614,7 +3453,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
+    "ms": 10,
     "factors": [
       [
         "gambling",
@@ -3627,13 +3466,146 @@
     ]
   },
   {
+    "url": "mebel-nasha-fabrika.ru",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 787,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "ml_content",
+        -8
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "winwin-om.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 9,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 855,
+    "factors": [
+      [
+        "favicon_impersonation",
+        -35
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "ml_content",
+        -8
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "1xbetdeposit.cam",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 84,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "dicepalacecasino.lt",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 79,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "peaches-casinonl.net",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 192,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "mcw-casino1.org",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 82,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "1xbetlive.life",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 116,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
     "url": "official-betwinnernigeria.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 9,
+    "ms": 1048,
     "factors": [
       [
         "gambling",
@@ -3654,13 +3626,13 @@
     ]
   },
   {
-    "url": "peaches-casinonl.net",
+    "url": "casinos-oxibet.name",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
+    "ms": 381,
     "factors": [
       [
         "gambling",
@@ -3675,7 +3647,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
+    "ms": 1947,
     "factors": [
       [
         "gambling",
@@ -3704,17 +3676,123 @@
     ]
   },
   {
-    "url": "mcw-casino1.org",
+    "url": "jbo2e.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
+    "ms": 579,
     "factors": [
       [
         "gambling",
         -60
+      ]
+    ]
+  },
+  {
+    "url": "leon-casino-france.net",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 446,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "k59casino.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 247,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "random_label",
+        -15
+      ]
+    ]
+  },
+  {
+    "url": "rtp-slot-togel.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 182,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "zizobetcasinos.de",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 115,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "pt-vemapostarcasino.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 413,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "universalmusic.com",
+    "label": "safe",
+    "group": "legit",
+    "score": 100,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 10203,
+    "factors": [
+      [
+        "unreachable",
+        0
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ],
+      [
+        "popularity",
+        14
       ]
     ]
   },
@@ -3725,7 +3803,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 4110,
     "factors": [
       [
         "gambling",
@@ -3766,43 +3844,13 @@
     ]
   },
   {
-    "url": "1xbetlive.life",
+    "url": "casinosnet.us",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "casinos-oxibet.name",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "jbo2e.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 7,
+    "ms": 78,
     "factors": [
       [
         "gambling",
@@ -3817,7 +3865,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 6,
+    "ms": 3414,
     "factors": [
       [
         "gambling",
@@ -3846,192 +3894,13 @@
     ]
   },
   {
-    "url": "leon-casino-france.net",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "k59casino.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "random_label",
-        -15
-      ]
-    ]
-  },
-  {
-    "url": "rtp-slot-togel.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "zizobetcasinos.de",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "pt-vemapostarcasino.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "bandartop88.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 26,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
-    "factors": [
-      [
-        "domain_age",
-        -35
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "unreachable",
-        -5
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "slotsjungle.co",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 69,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
-    "factors": [
-      [
-        "unreachable",
-        -5
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "casinosnet.us",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "mrtransit.org",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "domain_age",
-        -35
-      ],
-      [
-        "brand_impersonation",
-        -35
-      ],
-      [
-        "password_form",
-        -12
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
     "url": "ziatogel129.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
+    "ms": 775,
     "factors": [
       [
         "gambling",
@@ -4062,7 +3931,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
+    "ms": 83,
     "factors": [
       [
         "gambling",
@@ -4077,7 +3946,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
+    "ms": 293,
     "factors": [
       [
         "gambling",
@@ -4090,13 +3959,48 @@
     ]
   },
   {
+    "url": "bandartop88.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 3433,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -35
+      ],
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
     "url": "c7ppp.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 9,
+    "ms": 898,
     "factors": [
       [
         "gambling",
@@ -4127,7 +4031,7 @@
     "score": 29,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 9,
+    "ms": 892,
     "factors": [
       [
         "domain_age",
@@ -4148,31 +4052,17 @@
     ]
   },
   {
-    "url": "ufabet1.com.game",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 70,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10,
-    "factors": []
-  },
-  {
     "url": "the-pokiesnet-casino-au.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 18,
+    "ms": 200,
     "factors": [
       [
         "gambling",
         -60
-      ],
-      [
-        "domain_age",
-        -22
       ],
       [
         "random_label",
@@ -4187,15 +4077,11 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 18,
+    "ms": 89,
     "factors": [
       [
         "gambling",
         -60
-      ],
-      [
-        "domain_age",
-        -35
       ]
     ]
   },
@@ -4206,15 +4092,11 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 16,
+    "ms": 197,
     "factors": [
       [
         "gambling",
         -60
-      ],
-      [
-        "domain_age",
-        -22
       ]
     ]
   },
@@ -4225,7 +4107,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 170,
     "factors": [
       [
         "gambling",
@@ -4240,7 +4122,324 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 163,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "mrtransit.org",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 4450,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -35
+      ],
+      [
+        "brand_impersonation",
+        -35
+      ],
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "kh1ads.site",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 59,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 13981,
+    "factors": [
+      [
+        "random_label",
+        -15
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "sendmad.org",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 52,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 11833,
+    "factors": [
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "ufabet1.com.game",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 3285,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "w88ud9.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 5060,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "random_label",
+        -15
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "indopoker168.cc",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 23,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 5153,
+    "factors": [
+      [
+        "domain_age",
+        -35
+      ],
+      [
+        "risky_tld",
+        -12
+      ]
+    ]
+  },
+  {
+    "url": "official-luckyblockcasino.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 3821,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -35
+      ]
+    ]
+  },
+  {
+    "url": "7276slotsw.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 33,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3536,
+    "factors": [
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "random_label",
+        -15
+      ]
+    ]
+  },
+  {
+    "url": "7goldcasinos.de",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 58,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "88jokerslot.net",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 211,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "1wincasino-brasil.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 164,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "eaglestrikecasino.online",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 359,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "pinacasino.cam",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 272,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "slotsjungle.co",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 10355,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "ml_content",
+        -8
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ]
+    ]
+  },
+  {
+    "url": "melbet01.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 176,
     "factors": [
       [
         "gambling",
@@ -4255,7 +4454,7 @@
     "score": 12,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 14,
+    "ms": 6497,
     "factors": [
       [
         "domain_age",
@@ -4280,32 +4479,13 @@
     ]
   },
   {
-    "url": "w88ud9.com",
+    "url": "wikibet-dk.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 8,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "random_label",
-        -15
-      ]
-    ]
-  },
-  {
-    "url": "indopoker168.cc",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 10,
+    "ms": 488,
     "factors": [
       [
         "gambling",
@@ -4316,12 +4496,8 @@
         -35
       ],
       [
-        "risky_tld",
-        -12
-      ],
-      [
-        "cross_redirect",
-        -8
+        "ml_content",
+        -15
       ],
       [
         "transparency",
@@ -4334,108 +4510,13 @@
     ]
   },
   {
-    "url": "official-luckyblockcasino.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 10,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "7276slotsw.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 29,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 14,
-    "factors": [
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "random_label",
-        -15
-      ],
-      [
-        "ml_content",
-        -8
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "88jokerslot.net",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "7goldcasinos.de",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "1wincasino-brasil.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
     "url": "gb908.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 35,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
+    "ms": 907,
     "factors": [
       [
         "ml_content",
@@ -4452,13 +4533,585 @@
     ]
   },
   {
+    "url": "phoenix-link-casino-australia.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 156,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "random_label",
+        -15
+      ]
+    ]
+  },
+  {
+    "url": "1xbet-oswe.ru",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 64,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "88casino.fun",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 56,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "1xbetx.sbs",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 109,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "risky_tld",
+        -12
+      ]
+    ]
+  },
+  {
+    "url": "kassabetcasinonl.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 203,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "casinorehberi4.pro",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 96,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "betwinner-casino-ec.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 296,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "19bet52.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 160,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "random_label",
+        -15
+      ]
+    ]
+  },
+  {
+    "url": "1xbetturkey17.mobi",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 159,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "random_label",
+        -15
+      ]
+    ]
+  },
+  {
+    "url": "7u777casino.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 224,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "random_label",
+        -15
+      ]
+    ]
+  },
+  {
+    "url": "freespinx.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 1373,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "ml_content",
+        -25
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
+      ]
+    ]
+  },
+  {
+    "url": "q-bet-casino.bet",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 70,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "voxcasino-77.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 176,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "bplay555-slot.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 158,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "random_label",
+        -15
+      ]
+    ]
+  },
+  {
+    "url": "one-vv1701.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 1278,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "ml_content",
+        -25
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "random_label",
+        -15
+      ],
+      [
+        "random_label",
+        -15
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "nzcasino.best",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 70,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "twin194.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 1986,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "ml_content",
+        -8
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "rs99.casino",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 103,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "barbet-abaya.pl",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 690,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "ml_content",
+        -25
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "nv-casino-lv.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 153,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "poker88id.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 312,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "random_label",
+        -15
+      ]
+    ]
+  },
+  {
+    "url": "slotspalace-aud.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 2650,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "ml_content",
+        -25
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "premierbet-dz.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 2322,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "chancehillcasino.se",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 89,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "legianocasinobonus.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 164,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "de-bassbet.net",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 2424,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -35
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "slotgacor-jit.net",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 937,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "ml_content",
+        -15
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ]
+    ]
+  },
+  {
+    "url": "bk89.info",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 410,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
     "url": "swerte77w.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
+    "ms": 5442,
     "factors": [
       [
         "gambling",
@@ -4487,711 +5140,13 @@
     ]
   },
   {
-    "url": "eaglestrikecasino.online",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "pinacasino.cam",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "wikibet-dk.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "domain_age",
-        -35
-      ],
-      [
-        "ml_content",
-        -15
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "freespinx.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "ml_content",
-        -25
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "melbet01.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "twin194.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "ml_content",
-        -8
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "phoenix-link-casino-australia.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 6,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "random_label",
-        -15
-      ]
-    ]
-  },
-  {
-    "url": "1xbet-oswe.ru",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 7,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "1xbetx.sbs",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 7,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "risky_tld",
-        -12
-      ]
-    ]
-  },
-  {
-    "url": "88casino.fun",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 7,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "kassabetcasinonl.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 9,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "one-vv1701.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "ml_content",
-        -25
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "random_label",
-        -15
-      ],
-      [
-        "random_label",
-        -15
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "betwinner-casino-ec.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "casinorehberi4.pro",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "slotspalace-aud.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "ml_content",
-        -25
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "19bet52.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "random_label",
-        -15
-      ]
-    ]
-  },
-  {
-    "url": "1xbetturkey17.mobi",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "random_label",
-        -15
-      ]
-    ]
-  },
-  {
-    "url": "7u777casino.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "random_label",
-        -15
-      ]
-    ]
-  },
-  {
-    "url": "q-bet-casino.bet",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "voxcasino-77.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 10,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "bplay555-slot.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 10,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "random_label",
-        -15
-      ]
-    ]
-  },
-  {
-    "url": "slotsvi.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 10,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "premierbet-dz.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 9,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "nzcasino.best",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 8,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "de-bassbet.net",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 10,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "domain_age",
-        -35
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "rs99.casino",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "barbet-abaya.pl",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "ml_content",
-        -25
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "nv-casino-lv.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 11,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "poker88id.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 10,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "random_label",
-        -15
-      ]
-    ]
-  },
-  {
-    "url": "winnitavip-pl.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 42,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 12,
-    "factors": [
-      [
-        "domain_age",
-        -35
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "slotgacor-jit.net",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 8,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "ml_content",
-        -15
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "transparency",
-        6
-      ]
-    ]
-  },
-  {
-    "url": "chancehillcasino.se",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "legianocasinobonus.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 19,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "bk89.info",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 21,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
     "url": "8mbetsbd.click",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 21,
+    "ms": 874,
     "factors": [
       [
         "gambling",
@@ -5212,6 +5167,44 @@
       [
         "tls_valid",
         4
+      ]
+    ]
+  },
+  {
+    "url": "5nbetsorte.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 44,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 778,
+    "factors": [
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "ml_content",
+        -8
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "hadesbet-casinos-uk.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 160,
+    "factors": [
+      [
+        "gambling",
+        -60
       ]
     ]
   },
@@ -5222,7 +5215,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 19,
+    "ms": 939,
     "factors": [
       [
         "gambling",
@@ -5255,78 +5248,13 @@
     ]
   },
   {
-    "url": "5nbetsorte.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 44,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 19,
-    "factors": [
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "ml_content",
-        -8
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "aaajilicom.app",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 13,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "hadesbet-casinos-uk.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
     "url": "01-11.casino",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 12,
+    "ms": 172,
     "factors": [
       [
         "gambling",
@@ -5345,7 +5273,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 28,
+    "ms": 176,
     "factors": [
       [
         "gambling",
@@ -5354,44 +5282,32 @@
     ]
   },
   {
-    "url": "angkabet-amp60.com",
+    "url": "crowncasinoonline.cyou",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 31,
+    "ms": 112,
     "factors": [
       [
         "gambling",
         -60
       ],
       [
-        "domain_age",
-        -35
-      ],
-      [
-        "password_form",
+        "risky_tld",
         -12
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "tls_valid",
-        4
       ]
     ]
   },
   {
-    "url": "riobet-good.buzz",
+    "url": "aaajilicom.app",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 31,
+    "ms": 1061,
     "factors": [
       [
         "gambling",
@@ -5400,10 +5316,6 @@
       [
         "domain_age",
         -22
-      ],
-      [
-        "risky_tld",
-        -12
       ],
       [
         "transparency",
@@ -5416,21 +5328,25 @@
     ]
   },
   {
-    "url": "crowncasinoonline.cyou",
+    "url": "winnitavip-pl.com",
     "label": "dangerous",
     "group": "gambling",
-    "score": 10,
+    "score": 42,
     "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 31,
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3243,
     "factors": [
       [
-        "gambling",
-        -60
+        "domain_age",
+        -35
       ],
       [
-        "risky_tld",
-        -12
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
       ]
     ]
   },
@@ -5441,7 +5357,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 24,
+    "ms": 1158,
     "factors": [
       [
         "gambling",
@@ -5470,13 +5386,120 @@
     ]
   },
   {
+    "url": "slotsvi.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 5571,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "angkabet-amp60.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 1847,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -35
+      ],
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "simsinoscasino-france.net",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 163,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "richcasino-au.online",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 112,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ]
+    ]
+  },
+  {
+    "url": "66slots.bar",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 68,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "risky_tld",
+        -12
+      ]
+    ]
+  },
+  {
     "url": "99396e.com",
     "label": "dangerous",
     "group": "gambling",
     "score": 43,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 23,
+    "ms": 1535,
     "factors": [
       [
         "random_label",
@@ -5503,7 +5526,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 1180,
     "factors": [
       [
         "gambling",
@@ -5532,120 +5555,13 @@
     ]
   },
   {
-    "url": "jilivip46.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 68,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 13,
-    "factors": [
-      [
-        "ml_content",
-        -8
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "tototogel4daja.online",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 20,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 17,
-    "factors": [
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "random_label",
-        -15
-      ],
-      [
-        "password_form",
-        -12
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "simsinoscasino-france.net",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 20,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "richcasino-au.online",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 19,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ]
-    ]
-  },
-  {
-    "url": "66slots.bar",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 21,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "risky_tld",
-        -12
-      ]
-    ]
-  },
-  {
     "url": "https://j115h.vip/downapp",
     "label": "dangerous",
     "group": "gambling",
     "score": 0,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
+    "ms": 717,
     "factors": [
       [
         "image_phishing",
@@ -5676,7 +5592,7 @@
     "score": 0,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
+    "ms": 923,
     "factors": [
       [
         "image_phishing",
@@ -5701,13 +5617,125 @@
     ]
   },
   {
+    "url": "riobet-good.buzz",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 3721,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "risky_tld",
+        -12
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "icebugfioutlet.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 66,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1131,
+    "factors": [
+      [
+        "domain_age",
+        -10
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "next789.shop",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 768,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "jagoankosmik.info",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 627,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "domain_age",
+        -10
+      ],
+      [
+        "ml_content",
+        -8
+      ],
+      [
+        "fresh_cert",
+        -6
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
     "url": "securemed.shop",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 14,
+    "ms": 2611,
     "factors": [
       [
         "gambling",
@@ -5740,183 +5768,13 @@
     ]
   },
   {
-    "url": "icebugfioutlet.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 66,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 14,
-    "factors": [
-      [
-        "domain_age",
-        -10
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "next789.shop",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 16,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "domain_age",
-        -10
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "juegalabolita.com",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 79,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 16,
-    "factors": [
-      [
-        "password_form",
-        -12
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        12
-      ]
-    ]
-  },
-  {
-    "url": "jagoankosmik.info",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 15,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "password_form",
-        -12
-      ],
-      [
-        "domain_age",
-        -10
-      ],
-      [
-        "ml_content",
-        -8
-      ],
-      [
-        "fresh_cert",
-        -6
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "mellybet.gm",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 22,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "ml_content",
-        -25
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "olneytowncenter.org",
-    "label": "dangerous",
-    "group": "gambling",
-    "score": 10,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 22,
-    "factors": [
-      [
-        "gambling",
-        -60
-      ],
-      [
-        "ml_content",
-        -25
-      ],
-      [
-        "cross_redirect",
-        -8
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
     "url": "for4dbangau.live",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 21,
+    "ms": 281,
     "factors": [
       [
         "gambling",
@@ -5947,7 +5805,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 19,
+    "ms": 72,
     "factors": [
       [
         "gambling",
@@ -5962,7 +5820,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 22,
+    "ms": 309,
     "factors": [
       [
         "gambling",
@@ -5979,13 +5837,13 @@
     ]
   },
   {
-    "url": "vipjackpotcity.com",
+    "url": "mellybet.gm",
     "label": "dangerous",
     "group": "gambling",
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 26,
+    "ms": 2286,
     "factors": [
       [
         "gambling",
@@ -5993,11 +5851,73 @@
       ],
       [
         "ml_content",
-        -15
+        -25
       ],
       [
         "tls_valid",
         4
+      ]
+    ]
+  },
+  {
+    "url": "olneytowncenter.org",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 1855,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "ml_content",
+        -25
+      ],
+      [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "juegalabolita.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 79,
+    "status": "Safe",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3129,
+    "factors": [
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        12
       ]
     ]
   },
@@ -6008,7 +5928,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
-    "ms": 20,
+    "ms": 932,
     "factors": [
       [
         "gambling",
@@ -6037,21 +5957,110 @@
     ]
   },
   {
-    "url": "http://smarters-iptv-pro.com/",
+    "url": "tototogel4daja.online",
     "label": "dangerous",
-    "group": "phishing",
-    "score": 48,
+    "group": "gambling",
+    "score": 20,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 15,
+    "ms": 5890,
     "factors": [
       [
-        "no_https",
+        "domain_age",
+        -22
+      ],
+      [
+        "random_label",
+        -15
+      ],
+      [
+        "password_form",
         -12
       ],
       [
+        "cross_redirect",
+        -8
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "vipjackpotcity.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": 10,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine + Chốt chặn Pháp lý (Penalty Gate)",
+    "ms": 2404,
+    "factors": [
+      [
+        "gambling",
+        -60
+      ],
+      [
+        "ml_content",
+        -15
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "https://noturollife.shop/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 30,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 768,
+    "factors": [
+      [
+        "fake_shop_template",
+        -40
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "https://wirkzeugonline24.com/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 15,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 2382,
+    "factors": [
+      [
+        "fake_shop_template",
+        -40
+      ],
+      [
         "domain_age",
-        -10
+        -22
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
       ]
     ]
   },
@@ -6062,7 +6071,7 @@
     "score": 60,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 8,
+    "ms": 1289,
     "factors": [
       [
         "null_links",
@@ -6079,29 +6088,21 @@
     ]
   },
   {
-    "url": "https://wirkzeugonline24.com/",
+    "url": "http://smarters-iptv-pro.com/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 15,
+    "score": 48,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 806,
+    "ms": 4012,
     "factors": [
       [
-        "fake_shop_template",
-        -40
+        "no_https",
+        -12
       ],
       [
         "domain_age",
-        -22
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
+        -10
       ]
     ]
   },
@@ -6109,42 +6110,11 @@
     "url": "https://lidstore.shop/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 55,
-    "status": "Warning",
+    "score": 77,
+    "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 1562,
+    "ms": 777,
     "factors": [
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "https://noturollife.shop/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 15,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 1592,
-    "factors": [
-      [
-        "fake_shop_template",
-        -40
-      ],
-      [
-        "domain_age",
-        -22
-      ],
       [
         "transparency",
         3
@@ -6162,7 +6132,7 @@
     "score": 62,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 2160,
+    "ms": 5114,
     "factors": [
       [
         "obfuscation",
@@ -6175,17 +6145,71 @@
     ]
   },
   {
+    "url": "https://toniesspielzeug.com/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 54,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 4496,
+    "factors": [
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "domain_age",
+        -10
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "https://vogeltranke.com/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 40,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1670,
+    "factors": [
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
     "url": "https://4kidspuint.com/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 9,
+    "score": 0,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 1823,
+    "ms": 2446,
     "factors": [
       [
         "fake_shop_template",
         -40
+      ],
+      [
+        "opaque_shop",
+        -25
       ],
       [
         "domain_age",
@@ -6194,6 +6218,37 @@
       [
         "fresh_cert",
         -6
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "https://ziuberkram.com/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 0,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 666,
+    "factors": [
+      [
+        "fake_shop_template",
+        -40
+      ],
+      [
+        "opaque_shop",
+        -25
+      ],
+      [
+        "domain_age",
+        -22
       ],
       [
         "transparency",
@@ -6212,7 +6267,7 @@
     "score": 0,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 3,
+    "ms": 802,
     "factors": [
       [
         "telegram_exfil",
@@ -6257,21 +6312,21 @@
     ]
   },
   {
-    "url": "https://vogeltranke.com/",
+    "url": "https://olcofi.shop/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 40,
+    "score": 30,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 1254,
+    "ms": 757,
     "factors": [
       [
-        "domain_age",
-        -22
+        "fake_shop_template",
+        -40
       ],
       [
-        "password_form",
-        -12
+        "transparency",
+        3
       ],
       [
         "tls_valid",
@@ -6280,25 +6335,83 @@
     ]
   },
   {
-    "url": "https://toniesspielzeug.com/",
+    "url": "https://ronstanstore.com/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 54,
-    "status": "Warning",
+    "score": 39,
+    "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 3394,
+    "ms": 3219,
     "factors": [
+      [
+        "opaque_shop",
+        -25
+      ],
       [
         "password_form",
         -12
       ],
       [
-        "domain_age",
-        -10
-      ],
-      [
         "hsts",
         2
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "https://elivrosenkranzo.shop/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 30,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1576,
+    "factors": [
+      [
+        "fake_shop_template",
+        -40
+      ],
+      [
+        "transparency",
+        3
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
+    "url": "https://vitafyde.com/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 0,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1148,
+    "factors": [
+      [
+        "fake_shop_template",
+        -40
+      ],
+      [
+        "opaque_shop",
+        -25
+      ],
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "fresh_cert",
+        -6
+      ],
+      [
+        "transparency",
+        3
       ],
       [
         "tls_valid",
@@ -6313,7 +6426,7 @@
     "score": 0,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 3,
+    "ms": 3412,
     "factors": [
       [
         "domain_age",
@@ -6345,14 +6458,18 @@
     "url": "http://tokanimer-cdn6-hk3.xyz/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 3,
+    "score": 0,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 2,
+    "ms": 3430,
     "factors": [
       [
         "domain_age",
         -35
+      ],
+      [
+        "wallet_brand",
+        -30
       ],
       [
         "random_label",
@@ -6363,85 +6480,35 @@
         -12
       ],
       [
-        "unreachable",
-        -5
-      ]
-    ]
-  },
-  {
-    "url": "https://olcofi.shop/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 30,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 702,
-    "factors": [
+        "no_https",
+        -12
+      ],
       [
-        "fake_shop_template",
-        -40
+        "hsts",
+        2
       ],
       [
         "transparency",
         3
-      ],
-      [
-        "tls_valid",
-        4
       ]
     ]
   },
   {
-    "url": "https://ziuberkram.com/",
+    "url": "https://minicatwalk-de.com/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 15,
-    "status": "Dangerous",
+    "score": 63,
+    "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 1738,
+    "ms": 10178,
     "factors": [
-      [
-        "fake_shop_template",
-        -40
-      ],
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "https://vitafyde.com/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 9,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 805,
-    "factors": [
-      [
-        "fake_shop_template",
-        -40
-      ],
-      [
-        "domain_age",
-        -22
-      ],
       [
         "fresh_cert",
         -6
       ],
       [
-        "transparency",
-        3
+        "unreachable",
+        -5
       ],
       [
         "tls_valid",
@@ -6456,7 +6523,7 @@
     "score": 30,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 5,
+    "ms": 1528,
     "factors": [
       [
         "tls_invalid",
@@ -6479,7 +6546,7 @@
     "score": 36,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 2,
+    "ms": 1181,
     "factors": [
       [
         "domain_age",
@@ -6500,13 +6567,102 @@
     ]
   },
   {
+    "url": "https://stromerzeugerde.com/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 72,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 3852,
+    "factors": [
+      [
+        "password_form",
+        -12
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "domain_age",
+        8
+      ]
+    ]
+  },
+  {
+    "url": "https://2uqwvn.top/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 0,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1339,
+    "factors": [
+      [
+        "domain_age",
+        -35
+      ],
+      [
+        "ml_domain",
+        -20
+      ],
+      [
+        "tls_invalid",
+        -20
+      ],
+      [
+        "risky_tld",
+        -12
+      ],
+      [
+        "hsts",
+        2
+      ],
+      [
+        "transparency",
+        3
+      ]
+    ]
+  },
+  {
+    "url": "https://drelkuvizen.business/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 38,
+    "status": "Dangerous",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 1122,
+    "factors": [
+      [
+        "domain_age",
+        -22
+      ],
+      [
+        "external_form",
+        -20
+      ],
+      [
+        "tls_valid",
+        4
+      ],
+      [
+        "transparency",
+        6
+      ]
+    ]
+  },
+  {
     "url": "http://tokeimxn-cdnnode-sg53.lol/",
     "label": "dangerous",
     "group": "phishing",
     "score": 0,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 3,
+    "ms": 3376,
     "factors": [
       [
         "domain_age",
@@ -6535,56 +6691,21 @@
     ]
   },
   {
-    "url": "https://2uqwvn.top/",
+    "url": "https://ethnotheko.shop/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 0,
-    "status": "Dangerous",
+    "score": 55,
+    "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 5,
+    "ms": 1201,
     "factors": [
       [
         "domain_age",
-        -35
-      ],
-      [
-        "ml_domain",
-        -20
-      ],
-      [
-        "tls_invalid",
-        -20
-      ],
-      [
-        "risky_tld",
-        -12
-      ],
-      [
-        "hsts",
-        2
+        -22
       ],
       [
         "transparency",
         3
-      ]
-    ]
-  },
-  {
-    "url": "https://ronstanstore.com/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 64,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 3226,
-    "factors": [
-      [
-        "password_form",
-        -12
-      ],
-      [
-        "hsts",
-        2
       ],
       [
         "tls_valid",
@@ -6593,21 +6714,21 @@
     ]
   },
   {
-    "url": "https://elivrosenkranzo.shop/",
+    "url": "https://campingmobel.com/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 30,
-    "status": "Dangerous",
+    "score": 64,
+    "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 4599,
+    "ms": 3928,
     "factors": [
       [
-        "fake_shop_template",
-        -40
+        "password_form",
+        -12
       ],
       [
-        "transparency",
-        3
+        "hsts",
+        2
       ],
       [
         "tls_valid",
@@ -6622,53 +6743,7 @@
     "score": 77,
     "status": "Safe",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 865,
-    "factors": [
-      [
-        "transparency",
-        3
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "https://stromerzeugerde.com/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 72,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 5256,
-    "factors": [
-      [
-        "password_form",
-        -12
-      ],
-      [
-        "hsts",
-        2
-      ],
-      [
-        "tls_valid",
-        4
-      ],
-      [
-        "domain_age",
-        8
-      ]
-    ]
-  },
-  {
-    "url": "https://ethnotheko.shop/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 77,
-    "status": "Safe",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 779,
+    "ms": 3130,
     "factors": [
       [
         "transparency",
@@ -6687,7 +6762,7 @@
     "score": 10,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 4,
+    "ms": 627,
     "factors": [
       [
         "domain_age",
@@ -6716,40 +6791,21 @@
     ]
   },
   {
-    "url": "https://minicatwalk-de.com/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 63,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10123,
-    "factors": [
-      [
-        "fresh_cert",
-        -6
-      ],
-      [
-        "unreachable",
-        -5
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
     "url": "https://saengerneschirr.com/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 3,
+    "score": 0,
     "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 605,
+    "ms": 961,
     "factors": [
       [
         "fake_shop_template",
         -40
+      ],
+      [
+        "opaque_shop",
+        -25
       ],
       [
         "domain_age",
@@ -6770,13 +6826,32 @@
     ]
   },
   {
+    "url": "https://graefde.com/",
+    "label": "dangerous",
+    "group": "phishing",
+    "score": 69,
+    "status": "Warning",
+    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
+    "ms": 10207,
+    "factors": [
+      [
+        "unreachable",
+        -5
+      ],
+      [
+        "tls_valid",
+        4
+      ]
+    ]
+  },
+  {
     "url": "https://schuheverkauf-de.com/",
     "label": "dangerous",
     "group": "phishing",
     "score": 72,
     "status": "Warning",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 4541,
+    "ms": 5174,
     "factors": [
       [
         "password_form",
@@ -6797,87 +6872,44 @@
     ]
   },
   {
-    "url": "https://graefde.com/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 69,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10015,
-    "factors": [
-      [
-        "unreachable",
-        -5
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "https://campingmobel.com/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 69,
-    "status": "Warning",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10170,
-    "factors": [
-      [
-        "unreachable",
-        -5
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
-    "url": "https://drelkuvizen.business/",
-    "label": "dangerous",
-    "group": "phishing",
-    "score": 47,
-    "status": "Dangerous",
-    "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10017,
-    "factors": [
-      [
-        "domain_age",
-        -22
-      ],
-      [
-        "unreachable",
-        -5
-      ],
-      [
-        "tls_valid",
-        4
-      ]
-    ]
-  },
-  {
     "url": "https://badezimmer-stil.com/",
     "label": "dangerous",
     "group": "phishing",
-    "score": 59,
-    "status": "Warning",
+    "score": 29,
+    "status": "Dangerous",
     "engine": "Verity Evidence Engine (DNS · TLS · RDAP · Tranco · Threat Intel · Deep Learning)",
-    "ms": 10021,
+    "ms": 5163,
     "factors": [
+      [
+        "opaque_shop",
+        -25
+      ],
+      [
+        "password_form",
+        -12
+      ],
       [
         "domain_age",
         -10
       ],
       [
-        "unreachable",
-        -5
+        "hsts",
+        2
       ],
       [
         "tls_valid",
         4
       ]
     ]
+  },
+  {
+    "url": "jilivip46.com",
+    "label": "dangerous",
+    "group": "gambling",
+    "score": null,
+    "status": "error",
+    "engine": "",
+    "ms": 90006,
+    "error": "The operation was aborted due to timeout"
   }
 ]
