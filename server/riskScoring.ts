@@ -7,6 +7,7 @@ import {
   findTyposquatTarget,
   isGamblingTarget,
   isFakeShopTemplate,
+  isOpaqueShop,
   detectProhibitedGoods,
   isTrustedHost,
 } from './domainRules.ts';
@@ -333,6 +334,11 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
       if (recentlyRegistered && isFakeShopTemplate(html.title, html.text, d.ownerDomain)) {
         add('fake_shop_template', -40, 'Trang khớp khuôn shop giả hàng loạt', 'Tiêu đề chỉ là tên miền, kèm câu miễn phí vận chuyển theo ngưỡng đơn hàng: khuôn được dùng lặp lại trên rất nhiều tên miền shop lừa đảo.');
         capAt(30, 'malicious');
+      }
+      // Luật rộng hơn khuôn shop giả nên chỉ áp dụng khi biết chắc tên miền còn mới
+      if (ageDays !== null && ageDays < 2 * 365 && isOpaqueShop(html, d.ownerDomain)) {
+        add('opaque_shop', -25, 'Shop mới, trang chủ không có thông tin liên hệ', 'Tên miền chưa đầy 2 năm tuổi, trang chào bán nhưng không công bố điện thoại, email hay thông tin doanh nghiệp; đây là đặc điểm phổ biến của shop lừa đảo.');
+        capAt(40, 'suspicious');
       }
       if (themes.has('prize_scam')) {
         add('prize_scam', -20, 'Thông báo trúng thưởng/nhận quà', 'Nội dung dụ dỗ nhận thưởng - kịch bản lừa đảo kinh điển.');
