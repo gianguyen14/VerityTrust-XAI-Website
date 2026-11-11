@@ -8,6 +8,7 @@ import {
   isGamblingTarget,
   isFakeShopTemplate,
   isOpaqueShop,
+  VIETNAMESE_BRANDS,
   detectProhibitedGoods,
   isTrustedHost,
 } from './domainRules.ts';
@@ -254,7 +255,12 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
     if (html.botChallenge && isAnonymousHost) {
       add('bot_challenge', -12, 'Nội dung bị che sau thử thách bot (Cloudflare/DDoS)', 'Trang chặn bot tự động, chưa thể kiểm chứng nội dung thực tế bên trong.');
     }
-    if (html.telegramExfiltration) {
+    // Shop/web dịch vụ nhỏ ở Việt Nam hay nhận đơn qua Telegram bot; trang phishing thì ngắn, gần như không có liên kết
+    const credentialInputs = html.hasPasswordField || html.sensitiveFields.length > 0;
+    const telegramOrderForm = !credentialInputs && html.textLength >= 3000 && html.linkCount >= 30;
+    if (html.telegramExfiltration && telegramOrderForm) {
+      add('telegram_exfil', -15, 'Biểu mẫu gửi dữ liệu qua Telegram Bot', 'Mã trang gọi api.telegram.org/bot... Trang không có ô mật khẩu hay thông tin nhạy cảm, có thể chỉ là form nhận đơn, nhưng dữ liệu bạn nhập sẽ đi thẳng tới một tài khoản Telegram.');
+    } else if (html.telegramExfiltration) {
       add('telegram_exfil', -45, 'Gửi dữ liệu người dùng qua Telegram Bot', 'Mã trang gọi api.telegram.org/bot... - kỹ thuật đặc trưng của bộ công cụ phishing để chuyển mật khẩu/OTP cho kẻ gian.');
       capAt(15, 'phishing');
     }
@@ -269,15 +275,18 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
     }
     // Site lâu năm (không phổ biến): chỉ xét thương hiệu xuất hiện ở tiêu đề/mô tả, tránh báo nhầm shop ghi "chuyển khoản Vietcombank"
     const brandSource = isEstablished ? `${html.title} ${html.description}`.toLowerCase() : null;
+    // Web TMĐT đã thông báo Bộ Công Thương có tài khoản khách và hay nhắc thương hiệu quốc tế đang bán (Google Pixel)
+    // hoặc nút đăng nhập Google. Trang giả ngân hàng/sàn Việt có thể chép cả huy hiệu, nên thương hiệu Việt vẫn bị xét.
+    const registeredShop = html.moitBadge && !html.sensitiveFields.length;
     const impersonated = html.brandMentions
       .filter(b => !d.host.includes(b) && !(e.finalDomain?.host || '').includes(b))
-      .filter(b => brandSource === null || brandSource.includes(b));
+      .filter(b => brandSource === null || brandSource.includes(b))
+      .filter(b => !registeredShop || VIETNAMESE_BRANDS.includes(b));
     // Thương hiệu ở tiêu đề/mô tả + lời mời đăng nhập/xác minh là đủ; nếu thương hiệu chỉ xuất hiện trong thân trang
     // (trang SaaS/báo chí nhắc tới đối tác kèm nút "Đăng nhập") thì phải có ô mật khẩu hoặc ô thông tin nhạy cảm thật
     const headline = `${html.title} ${html.description}`.toLowerCase();
     const brandInHeadline = impersonated.some(b => headline.includes(b));
-    const credentialFields = html.hasPasswordField || html.sensitiveFields.length > 0;
-    if (impersonated.length && isAnonymousHost && (credentialFields || (brandInHeadline && html.credentialPrompt))) {
+    if (impersonated.length && isAnonymousHost && (credentialInputs || (brandInHeadline && html.credentialPrompt))) {
       add('brand_impersonation', -35, `Giả danh thương hiệu ${impersonated.slice(0, 3).join(', ')}`, 'Trang nhắc tới thương hiệu lớn và yêu cầu đăng nhập/xác minh, nhưng không chạy trên tên miền chính thức của thương hiệu đó.');
       if (html.hasPasswordField || html.sensitiveFields.length) capAt(15, 'phishing');
     }

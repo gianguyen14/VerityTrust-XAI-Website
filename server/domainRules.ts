@@ -268,9 +268,14 @@ export function detectProhibitedGoods(title: string, text: string): string | nul
 }
 
 // Brands frequently targeted by typosquatting, deceptive subdomains, and credential theft
-export const TARGETED_BRAND_NAMES = [
+// Ngân hàng, sàn TMĐT, ví và dịch vụ công Việt Nam
+export const VIETNAMESE_BRANDS = [
   'vietcombank', 'techcombank', 'bidv', 'agribank', 'mbbank', 'vpbank', 'sacombank',
   'shopee', 'lazada', 'tiki', 'vneid', 'dichvucong', 'momo', 'vnpay', 'zalopay',
+];
+
+export const TARGETED_BRAND_NAMES = [
+  ...VIETNAMESE_BRANDS,
   'facebook', 'google', 'apple', 'paypal', 'binance', 'netflix', 'microsoft',
   // Thương hiệu quốc tế bị giả mạo nhiều nhất trong các feed phishing (OpenPhish, PhishTank)
   'roblox', 'instagram', 'amazon', 'spotify', 'xfinity', 'whatsapp', 'telegram', 'discord', 'coinbase',
@@ -431,6 +436,8 @@ export function findTyposquatTarget(ownerLabel: string): string | undefined {
   for (const brand of PROTECTED_LABELS) {
     if (normalized === brand) return brand;
     const maxDist = brand.length >= 9 ? 2 : 1;
+    // Thương hiệu ngắn: đổi 1 ký tự ra rất nhiều tên thật (bnews/znews, monri/monre), chỉ tính thêm/bớt ký tự
+    if (brand.length <= 5 && label.length === brand.length) continue;
     if (Math.abs(label.length - brand.length) <= maxDist && levenshtein(normalized, brand, maxDist) <= maxDist) {
       return brand;
     }
