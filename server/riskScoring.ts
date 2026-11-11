@@ -400,6 +400,7 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
       !html.telegramExfiltration &&
       html.sensitiveFields.length === 0 &&
       impersonated.length === 0 &&
+      !factors.some(f => f.id === 'brand_in_domain' || f.id === 'typosquat') &&
       !html.faviconBrand &&
       !gambling &&
       !d.isFreeHosting &&

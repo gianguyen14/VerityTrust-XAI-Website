@@ -14,7 +14,7 @@ export const TRUSTED_APEX_DOMAINS = new Set([
   'bidv.com.vn', 'agribank.com.vn', 'mbbank.com.vn', 'acb.com.vn', 'shb.com.vn',
   'vpbank.com.vn', 'sacombank.com.vn', 'tpbank.com.vn', 'hdbank.com.vn', 'vib.com.vn',
   'seabank.com.vn', 'ocb.com.vn', 'msb.com.vn', 'bacabank.com.vn', 'pvcombank.com.vn',
-  'momo.vn', 'vnpay.vn', 'zalopay.vn', 'viettelmoney.vn', 'sbv.gov.vn',
+  'momo.vn', 'vnpay.vn', 'zalopay.vn', 'zalopay.com.vn', 'viettelmoney.vn', 'sbv.gov.vn',
 
   // Vietnam National Government, Ministries & Public Portals
   'chinhphu.vn', 'bocongan.gov.vn', 'mic.gov.vn', 'moit.gov.vn', 'mof.gov.vn',
@@ -30,6 +30,8 @@ export const TRUSTED_APEX_DOMAINS = new Set([
   'shopee.vn', 'tiki.vn', 'lazada.vn', 'sendo.vn', 'fpt.com', 'fptshop.com.vn',
   'thegioididong.com', 'dienmayxanh.com', 'topzone.vn', 'cellphones.com.vn',
   'bachhoaxanh.com', 'hoanghamobile.com', 'viettelstore.vn', 'viettel.vn', 'vinaphone.vn',
+  'topcv.vn', 'ghtk.vn', 'giaohangtietkiem.vn', 'viettelpost.vn', 'viettelpost.com.vn', 'vnpost.vn',
+  'vietnamairlines.com', 'vietjetair.com', 'evn.com.vn',
 
   // Global Trusted Technology, Cloud & Research Authorities
   'google.com', 'google.com.vn', 'youtube.com', 'facebook.com', 'zalo.me',
@@ -274,6 +276,13 @@ export const VIETNAMESE_BRANDS = [
   'shopee', 'lazada', 'tiki', 'vneid', 'dichvucong', 'momo', 'vnpay', 'zalopay',
 ];
 
+// Thương hiệu Việt hay bị mạo danh qua tên miền (danh sách Tín Nhiệm Mạng). Chỉ so khớp tên miền, không xét nội dung:
+// shop thật hay ghi "giao qua GHTK/Viettel Post" hoặc "bay Vietnam Airlines"
+const VIETNAMESE_DOMAIN_BRANDS = [
+  'dienmayxanh', 'thegioididong', 'topcv', 'giaohangtietkiem', 'ghtk', 'viettelpost', 'vnpost',
+  'vietnamairlines', 'vnairlines', 'vietjet', 'bocongan',
+];
+
 export const TARGETED_BRAND_NAMES = [
   ...VIETNAMESE_BRANDS,
   'facebook', 'google', 'apple', 'paypal', 'binance', 'netflix', 'microsoft',
@@ -308,7 +317,7 @@ export const PHISHING_HOST_KEYWORDS = [
  */
 export function findImpersonatedBrand(hostname: string): string | undefined {
   const parts = (hostname || '').toLowerCase().split(/[.-]/).filter(Boolean);
-  return TARGETED_BRAND_NAMES.find(brand => parts.some(part => {
+  return [...TARGETED_BRAND_NAMES, ...VIETNAMESE_DOMAIN_BRANDS].find(brand => parts.some(part => {
     if (brand.length >= 7) return part.includes(brand);
     if (brand.length <= 4) return part === brand || new RegExp(`^${brand}\\d+$`).test(part);
     return part.startsWith(brand);
