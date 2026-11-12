@@ -81,11 +81,19 @@ export type ScamTheme = 'bank_login' | 'wallet_brand' | 'meta_support' | 'fake_d
 // Mẫu nội dung của các chiến dịch lừa đảo phổ biến; chỉ dùng kết hợp với tên miền không phổ biến/chính thống
 const SCAM_THEME_PATTERNS: Array<[ScamTheme, RegExp]> = [
   ['bank_login', /\b(?:online banking|internet banking|e-?banking|home ?banking|mobile banking|netbank|banca (?:online|en l[ií]nea|por internet|digital)|banco [a-z]+|bankowo[sś][cć] internetowa)\b|ngân hàng điện tử|ngân hàng số|đăng nhập ngân hàng/i],
-  ['wallet_brand', /\b(?:atomic wallet|exodus wallet|trust ?wallet|metamask|phantom wallet|ledger live|trezor suite|tokenpocket|imtoken|safepal|bitget wallet|okx wallet|coinbase wallet)\b|tp\s*钱包|tp官方/i],
+  ['wallet_brand', /\b(?:atomic wallet|exodus wallet|trust ?wallet|metamask|phantom wallet|ledger live|trezor suite|trezor\.io|trezor (?:bridge|wallet|hardware|model)|ledger (?:wallet|nano|hardware)|tokenpocket|imtoken|safepal|bitget wallet|okx wallet|coinbase wallet)\b|tp\s*钱包|tp官方/i],
   ['meta_support', /\b(?:business help center|meta business (?:support|suite)|meta verified|facebook (?:help|support) (?:center|team)|page (?:appeal|restricted|has been (?:restricted|disabled))|violat(?:ed|ion of) (?:our )?community standards|copyright infringement (?:notice|report)|account (?:has been )?(?:restricted|disabled|suspended))\b/i],
   ['fake_download', /官方下载|官方正版|official (?:app )?download|download (?:the )?official app|tải (?:ứng dụng|app) chính thức/i],
   ['prize_scam', /\b(?:congratulations[,!]? you(?:'ve| have) (?:won|been selected)|claim your (?:prize|reward|gift)|you are (?:our )?lucky winner)\b|chúc mừng bạn đã trúng|bạn đã trúng thưởng|nhận quà tri ân|nhận thưởng ngay/i],
 ];
+
+export function detectScamThemes(lowerText: string): ScamTheme[] {
+  // Kẻ gian hay thêm dấu vào tên thương hiệu để né bộ lọc (Trézor, Lédger): so cả bản đã bỏ dấu
+  const unaccented = lowerText.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return SCAM_THEME_PATTERNS
+    .filter(([theme, re]) => re.test(lowerText) || (theme === 'wallet_brand' && re.test(unaccented)))
+    .map(([theme]) => theme);
+}
 
 export interface SiteEvidence {
   url: string;
@@ -469,7 +477,7 @@ export function analyzeHtml(html: string, pageUrl: string, ownerDomain: string):
     brandMentions,
     credentialPrompt: /\b(?:sign in|log ?in|verify your|confirm your|account (?:suspended|locked|limited)|unusual activity|đăng nhập|xác minh tài khoản|xác thực tài khoản|tài khoản (?:bị|đã bị) (?:khóa|tạm khóa)|cập nhật thông tin)\b/i.test(lowerText),
     botChallenge: /just a moment|attention required|checking your browser|cf-browser-verification|ddos-guard|client challenge|verify you are human|enable javascript and cookies to continue/i.test(`${title} ${text.slice(0, 500)}`),
-    scamThemes: SCAM_THEME_PATTERNS.filter(([, re]) => re.test(lowerText)).map(([theme]) => theme),
+    scamThemes: detectScamThemes(lowerText),
     isSpa,
     imageDominantForm,
     faviconUrl,

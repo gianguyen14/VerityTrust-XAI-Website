@@ -67,6 +67,22 @@ export function statusFromScore(score: number): RiskAssessment['status'] {
   return 'Dangerous';
 }
 
+const REMOVED_PAGE = /site not found|404: not_found|there isn['’]t a github pages site here|deployment (?:not found|has been disabled|could not be found)|no such app|project not found|this site (?:is|has been) (?:suspended|disabled|removed)|page not found/i;
+const PLATFORM_WARNING = /suspected (?:phishing|malware)|phishing (?:site )?(?:warning|detected)|deceptive site ahead|reported as (?:phishing|unsafe)/i;
+// Đồ án/bản sao học tập (Netflix clone, Amazon project...) đặt trên vercel/github là chuyện bình thường
+const CLONE_PROJECT = /\bclone\b|\bdemo\b|\bproject\b|tutorial|portfolio|assignment|practice|replica|\bui\b/i;
+// Thương hiệu hay bị dựng trang giả trên hosting miễn phí (ngoài danh sách thương hiệu chung)
+const HOSTED_PAGE_BRANDS = [
+  ...TARGETED_BRAND_NAMES.filter(b => b.length >= 4),
+  'kucoin', 'opensea', 'kraken', 'bybit', 'okx', 'bitget', 'trezor', 'ledger', 'trust wallet', 'exodus', 'phantom', 'uniswap',
+  'itau', 'santander', 'bradesco', 'caixa', 'nubank', 'chase', 'citibank', 'hsbc', 'barclays', 'revolut',
+  'adobe', 'onedrive', 'sharepoint', 'office 365', 'outlook', 'dropbox', 'wetransfer', 'dhl', 'ups', 'royal mail', 'auspost',
+];
+const foldAccents = (v: string) => v.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+// Các yếu tố chỉ nói về nơi đặt trang, không nói gì về nội dung
+const HOSTING_ONLY_FACTORS = ['free_hosting', 'ml_domain', 'fresh_cert', 'domain_age', 'risky_tld'];
+
 export function scoreEvidence(e: SiteEvidence): RiskAssessment {
   const factors: RiskFactor[] = [];
   const caps: Array<{ value: number; verdict: RiskVerdict }> = [];
@@ -108,7 +124,11 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
   }
 
   // ---------------------------------------------------------------- DNS
-  if (e.dns.privateResolution) {
+  // Bộ lọc DNS của mạng (nhà mạng, AdGuard, NextDNS...) hay trả về 127.0.0.1 cho web bị chặn, kể cả web lớn hợp pháp
+  const dnsBlockedButKnown = e.dns.privateResolution && (isTrusted || (rank !== null && rank <= 10_000 && !d.isFreeHosting));
+  if (dnsBlockedButKnown) {
+    add('dns_blocked', 0, 'Mạng của bạn đang chặn tên miền này', 'DNS trả về địa chỉ nội bộ nên không tải được trang để kiểm tra. Đây là tên miền phổ biến/chính thống, nhiều khả năng do bộ lọc DNS của mạng chặn chứ không phải trang nguy hiểm.');
+  } else if (e.dns.privateResolution) {
     add('private_dns', -55, 'Tên miền trỏ về địa chỉ mạng nội bộ', 'Tên miền công khai nhưng phân giải ra IP nội bộ/không công khai (dấu hiệu sinkhole hoặc tấn công DNS rebinding).');
     capAt(15, 'malicious');
   } else if (e.dns.nxdomain) {
@@ -168,7 +188,10 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
     }
     // Mô hình học sâu trên chuỗi tên miền (huấn luyện từ ~380 nghìn tên miền phishing thật)
     const mlProbability = dom === d ? e.urlModelProbability : e.finalUrlModelProbability;
-    if (mlProbability !== null) {
+    // Trang trên tên miền con (vercel.app, github.io, shop.abc.com...): mô hình tên miền chỉ học được hình dạng của nền tảng
+    // hoặc tên miền gốc, không nói được gì về chính trang. Nhóm này chấm theo nội dung đọc được.
+    const skipDomainModel = dom.isFreeHosting || (dom.host !== dom.ownerDomain && dom.host !== `www.${dom.ownerDomain}`);
+    if (mlProbability !== null && !skipDomainModel) {
       const pct = Math.round(mlProbability * 100);
       const delta = mlProbability >= ML_STRONG ? -20 : mlProbability >= ML_MODERATE ? -12 : 0;
       if (delta) {
@@ -289,6 +312,27 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
     if (impersonated.length && isAnonymousHost && (credentialInputs || (brandInHeadline && html.credentialPrompt))) {
       add('brand_impersonation', -35, `Giả danh thương hiệu ${impersonated.slice(0, 3).join(', ')}`, 'Trang nhắc tới thương hiệu lớn và yêu cầu đăng nhập/xác minh, nhưng không chạy trên tên miền chính thức của thương hiệu đó.');
       if (html.hasPasswordField || html.sensitiveFields.length) capAt(15, 'phishing');
+    }
+    // ---- Trang trên tên miền con / hosting miễn phí: không dùng mô hình tên miền, đọc nội dung trang
+    const hostedPage = d.isFreeHosting || isSubdomainHost;
+    const pageHead = `${html.title} ${html.text.slice(0, 600)}`;
+    // Nền tảng báo trang không còn (đã bị gỡ sau khi bị báo cáo, hoặc chưa từng có)
+    if (hostedPage && isAnonymousHost && html.textLength < 1200 && REMOVED_PAGE.test(pageHead)) {
+      add('removed_page', -30, 'Trang đã bị nền tảng gỡ hoặc không tồn tại', 'Nền tảng hosting trả về trang "không tìm thấy". Trang lừa đảo trên hosting miễn phí thường bị gỡ sau khi bị báo cáo; không còn nội dung nào để xác minh.');
+      capAt(25, 'unreachable');
+    }
+    // Cloudflare/Netlify... tự chèn trang cảnh báo trước nội dung đã bị báo cáo
+    if (PLATFORM_WARNING.test(html.title) || (PLATFORM_WARNING.test(html.text.slice(0, 400)) && /cloudflare|netlify|vercel|github/i.test(pageHead))) {
+      add('platform_warning', -50, 'Nền tảng hosting đã gắn cảnh báo lừa đảo/mã độc', 'Trước khi hiện nội dung, nhà cung cấp hạ tầng chèn trang cảnh báo "Suspected Phishing/Malware": trang đã bị báo cáo và xác minh là nguy hiểm.');
+      capAt(10, 'malicious');
+    }
+    // Tiêu đề mang tên thương hiệu lớn trên tên miền con mà thương hiệu đó không sở hữu
+    const headlineBrands = hostedPage && isAnonymousHost && !d.isVerifiedBrandAccount && !CLONE_PROJECT.test(`${html.title} ${html.description}`)
+      ? HOSTED_PAGE_BRANDS.filter(b => new RegExp(`(?:^|[^a-z])${b}(?:[^a-z]|$)`).test(foldAccents(`${html.title} ${html.description}`).toLowerCase()))
+      : [];
+    if (headlineBrands.length && !factors.some(f => f.id === 'brand_impersonation' || f.id === 'brand_in_domain')) {
+      add('hosted_brand', -35, `Trang trên tên miền con mang tên thương hiệu ${headlineBrands.slice(0, 2).join(', ')}`, `Tiêu đề trang dùng tên "${headlineBrands[0]}" nhưng trang nằm trên tên miền con "${d.host}" mà thương hiệu này không sở hữu. Doanh nghiệp thật không đặt trang chính thức trên tên miền con của nền tảng miễn phí.`);
+      capAt(30, 'phishing');
     }
     if (html.faviconBrand && isAnonymousHost) {
       add('favicon_impersonation', -35, `Biểu tượng (Favicon) giả mạo thương hiệu "${html.faviconBrand}"`, `Trang sử dụng favicon của "${html.faviconBrand}" trên tên miền không thuộc quyền sở hữu của thương hiệu này.`);
@@ -411,6 +455,19 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
       floor = floor === null ? targetFloor : Math.max(floor, targetFloor);
       add('smb_shield', 10, 'Kích hoạt Khiên bảo hộ doanh nghiệp minh bạch', 'Website công bố đầy đủ thông tin pháp lý/MST/chính sách/liên hệ và không có dấu hiệu mạo danh thương hiệu hay đánh cắp dữ liệu.');
     }
+  }
+
+  // Trang trên hosting miễn phí bị trừ điểm hai lần cho cùng một việc: luật free_hosting và mô hình tên miền
+  // (học từ rất nhiều phishing trên vercel.app, pages.dev...). Trang cá nhân, dự án, tài liệu hợp pháp cũng nằm ở đó.
+  // Nếu trang có nội dung đầy đủ và không có bằng chứng nào ngoài tên miền thì dừng ở mức "Cảnh báo".
+  if (d.isFreeHosting && html && !gambling && html.textLength >= 2500 && html.linkCount >= 10 &&
+    !html.scamThemes.length && !html.obfuscationSignals && !html.externalRedirect &&
+    factors.every(f => f.delta >= 0 || HOSTING_ONLY_FACTORS.includes(f.id))) {
+    // Có thêm thông tin liên hệ, liên kết chủ yếu trỏ về chính trang và không có biểu mẫu gửi ra ngoài:
+    // trang thông tin thuần tuý (trang cá nhân, dự án, tài liệu), người xem không có gì để bị lấy -> "An toàn"
+    const informational = (html.contactInfo || html.contactDetails) && html.externalLinkRatio <= 0.5 && !html.externalFormAction && !html.telegramExfiltration;
+    floor = Math.max(floor ?? 0, informational ? 75 : 55);
+    add('content_site', 0, 'Trang có nội dung đầy đủ, không thu thập dữ liệu', 'Trang nằm trên hosting miễn phí nhưng có nội dung và điều hướng đầy đủ, không có ô mật khẩu, không nhắc thương hiệu để mạo danh. Hosting miễn phí vẫn không xác minh được chủ sở hữu.');
   }
 
   // ---------------------------------------------------------------- Tổng hợp
