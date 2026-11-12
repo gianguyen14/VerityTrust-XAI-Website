@@ -1,0 +1,102 @@
+# Huấn luyện mô hình đọc nội dung trang trên trang thật của PhreshPhish (Hugging Face, CC BY 4.0).
+# Chạy trên runner của GitHub để không phải tải ~vài GB và huấn luyện trên máy cá nhân.
+# Kết quả (mô hình, log, bảng so sánh với mô hình đang dùng) nằm trong artifact của lượt chạy;
+# workflow KHÔNG tự thay server/models/: muốn dùng mô hình mới phải đo toàn luồng trước.
+name: Train content model
+
+on:
+  workflow_dispatch:
+    inputs:
+      train_shards:
+        description: Số file parquet của tập train cần tải (mỗi file ~0,5 GB, tổng 56 file)
+        default: '4'
+      per_class:
+        description: Số trang mỗi lớp (lừa đảo / hợp pháp) để huấn luyện
+        default: '15000'
+      test_per_class:
+        description: Số trang mỗi lớp lấy từ tập test để so sánh mô hình
+        default: '3000'
+      langs:
+        description: 'Chỉ lấy các ngôn ngữ này, vd "en,vi" (để trống = mọi ngôn ngữ)'
+        default: ''
+      epochs:
+        description: Số epoch
+        default: '3'
+      real_weight:
+        description: Số lần lặp lại mỗi trang thật so với dữ liệu tổng hợp
+        default: '3'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: train-content-model
+  cancel-in-progress: false
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      # Token Hugging Face (tuỳ chọn, chỉ để tránh giới hạn tốc độ tải). Thêm ở Settings > Secrets > HF_TOKEN.
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      HF_HUB_DISABLE_PROGRESS_BARS: '1'
+      THREAT_FEEDS: 'off'
+      POPULARITY_LIST: 'off'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cài thư viện
+        run: |
+          npm ci --no-audit --no-fund
+          pip install --quiet pyarrow huggingface_hub
+
+      - name: Lấy mẫu PhreshPhish (train + test)
+        run: |
+          python3 scripts/phreshphish-sample.py --split train --shards "${{ inputs.train_shards }}" \
+            --per-class "${{ inputs.per_class }}" --langs "${{ inputs.langs }}" --out .cache/phreshphish/train.jsonl
+          python3 scripts/phreshphish-sample.py --split test --shards 1 \
+            --per-class "${{ inputs.test_per_class }}" --langs "${{ inputs.langs }}" --seed 11 --out .cache/phreshphish/test.jsonl
+          df -h . | tail -1
+
+      - name: Chuyển sang định dạng huấn luyện
+        run: |
+          npx tsx scripts/import-pages.ts --in .cache/phreshphish/train.jsonl --out .cache/training/phreshphish-train.jsonl
+          # Tập test bỏ mọi tên miền đã có trong tập train để số đo thật sự là "chưa từng thấy"
+          npx tsx scripts/import-pages.ts --in .cache/phreshphish/test.jsonl --out .cache/training/phreshphish-test.jsonl \
+            --exclude-owners .cache/training/phreshphish-train.jsonl
+          rm -f .cache/phreshphish/*.jsonl
+
+      - name: Huấn luyện
+        run: |
+          mkdir -p artifacts
+          npx tsx scripts/train-content-model.ts --real .cache/training/phreshphish-train.jsonl \
+            --epochs "${{ inputs.epochs }}" --real-weight "${{ inputs.real_weight }}" \
+            --out artifacts/content-model.bin.gz 2>&1 | tee artifacts/train.log
+
+      - name: So sánh với mô hình đang dùng
+        run: |
+          {
+            echo "## Mô hình nội dung: PhreshPhish ${{ inputs.train_shards }} file, ${{ inputs.per_class }} trang/lớp, ngôn ngữ: ${{ inputs.langs || 'tất cả' }}"
+            echo
+            npx tsx scripts/eval-content-holdout.ts --data .cache/training/phreshphish-test.jsonl \
+              --models server/models/phishing-content-model.bin.gz,artifacts/content-model.bin.gz --json artifacts/metrics.json
+            echo
+            echo "Ngưỡng 0,82 / 0,90 / 0,92 là ngưỡng riskScoring.ts đang dùng. Trước khi thay server/models/, chạy toàn luồng A-D với CONTENT_MODEL_PATH trỏ tới mô hình mới."
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: content-model-${{ github.run_number }}
+          path: artifacts/
+          retention-days: 30
