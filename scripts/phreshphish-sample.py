@@ -49,7 +49,9 @@ with open(args.out, 'w') as out:
         path = hf_hub_download(REPO, name, repo_type='dataset')
         target = [round(quota * idx) - kept[0], round(quota * idx) - kept[1]]
         pf = pq.ParquetFile(path)
-        rows = []
+        # Lấy mẫu ngẫu nhiên trong file với xác suất vừa đủ cho chỉ tiêu (mỗi file chỉ ~9.000 dòng cho cả hai lớp),
+        # để không dồn hết vào đầu file nhưng cũng không bỏ phí dữ liệu
+        keep_p = min(1.0, 2.5 * max(target) / max(1, pf.metadata.num_rows))
         for batch in pf.iter_batches(batch_size=512, columns=['url', 'label', 'target', 'lang', 'date', 'html']):
             for r in batch.to_pylist():
                 y = 0 if r['label'] == 'benign' else 1
@@ -65,8 +67,7 @@ with open(args.out, 'w') as out:
                 host = (urlsplit(r['url']).hostname or '').lower()
                 if len(html) < 200 or not host or per_host.get(host, 0) >= 2:
                     continue
-                # Lấy mẫu ngẫu nhiên trong file: giữ ~1/3 số dòng hợp lệ để không dồn hết vào đầu file
-                if random.random() > 0.35:
+                if random.random() > keep_p:
                     continue
                 per_host[host] = per_host.get(host, 0) + 1
                 target[y] -= 1

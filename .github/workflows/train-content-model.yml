@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
     inputs:
       train_shards:
-        description: Số file parquet của tập train cần tải (mỗi file ~0,5 GB, tổng 56 file)
-        default: '4'
+        description: Số file parquet của tập train cần tải (mỗi file ~0,5 GB, ~3.500 trang/lớp; tổng 56 file)
+        default: '6'
       per_class:
         description: Số trang mỗi lớp (lừa đảo / hợp pháp) để huấn luyện
         default: '15000'
