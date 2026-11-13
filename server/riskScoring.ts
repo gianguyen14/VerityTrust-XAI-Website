@@ -57,9 +57,12 @@ const BASE_SCORE = 70;
 // Ngưỡng xác suất của mô hình học sâu (chọn theo tỉ lệ báo nhầm trên tập validation, xem scripts/train-url-model.ts)
 const ML_STRONG = 0.95;
 const ML_MODERATE = 0.85;
-// Mô hình nội dung (huấn luyện bằng label smoothing nên đầu ra tối đa ~0,95); ngưỡng chọn trên nửa "tune" của tập trang thật.
-// Trọng số nhỏ (-10) vì A/B cho thấy mô hình đôi khi trừ điểm trang bán lẻ Việt Nam hợp pháp (ngôn ngữ khuyến mãi).
-const CONTENT_ML_THRESHOLD = 0.9;
+// Mô hình nội dung (label smoothing nên đầu ra tối đa ~0,95), huấn luyện 13/11/2026 trên ~45.500 trang thật
+// (PhreshPhish + trang tự thu, scripts/train-on-server.sh). Ba ngưỡng chọn để số web hợp pháp bị trúng trong tập A-D
+// bằng mô hình cũ ở các ngưỡng 0,82 / 0,90 / 0,92.
+const CONTENT_ML_THRESHOLD = 0.91;
+const CONTENT_ML_HIGH = 0.924;
+const CONTENT_ML_LOW = 0.809;
 
 export function statusFromScore(score: number): RiskAssessment['status'] {
   if (score >= 75) return 'Safe';
@@ -351,12 +354,12 @@ export function scoreEvidence(e: SiteEvidence): RiskAssessment {
       const contentRisk = predictContentRisk(html);
       if (contentRisk !== null) {
         const pct = Math.round(contentRisk * 100);
-        if (contentRisk >= 0.92) {
+        if (contentRisk >= CONTENT_ML_HIGH) {
           add('ml_content', -25, 'Mô hình học sâu nhận diện nội dung lừa đảo / cờ bạc rất cao', `Mạng nơ-ron đọc tiêu đề, mô tả và cấu trúc trang cho xác suất rủi ro ${pct}%.`);
           if (!html.moitBadge && !html.taxId) capAt(35, 'suspicious');
         } else if (contentRisk >= CONTENT_ML_THRESHOLD) {
           add('ml_content', -15, 'Mô hình học sâu nhận diện nội dung giống kịch bản lừa đảo', `Mạng nơ-ron đọc tiêu đề, mô tả và cấu trúc trang cho xác suất rủi ro ${pct}%.`);
-        } else if (contentRisk >= 0.82) {
+        } else if (contentRisk >= CONTENT_ML_LOW) {
           add('ml_content', -8, 'Mô hình học sâu cảnh báo nội dung có yếu tố rủi ro', `Mạng nơ-ron đánh giá xác suất rủi ro ${pct}%.`);
         }
       }
