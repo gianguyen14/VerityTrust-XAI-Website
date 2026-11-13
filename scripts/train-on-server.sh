@@ -6,6 +6,7 @@
 #   bash train.sh        (hoặc chạy nền: nohup bash train.sh > train.log 2>&1 &   rồi   tail -f train.log)
 #
 # Đổi tham số bằng biến môi trường, vd:  SHARDS=8 PER_CLASS=30000 bash train.sh
+# Gộp thêm trang tự thu:               EXTRA_PAGES=https://.../pages.jsonl.gz bash train.sh
 set -euo pipefail
 
 PER_CLASS="${PER_CLASS:-15000}"       # số trang mỗi lớp (lừa đảo / hợp pháp) để huấn luyện
@@ -15,6 +16,8 @@ TEST_PER_CLASS="${TEST_PER_CLASS:-3000}"
 LANGS="${LANGS:-}"                    # vd "en,vi"; để trống = mọi ngôn ngữ
 EPOCHS="${EPOCHS:-3}"
 REAL_WEIGHT="${REAL_WEIGHT:-3}"
+# Link tới file trang tự thu (định dạng real-pages*.jsonl, có thể nén .gz) để gộp vào tập train, vd trang .vn/web nhỏ
+EXTRA_PAGES="${EXTRA_PAGES:-}"
 DIR="${DIR:-/opt/verity-train}"
 REPO="${REPO:-https://github.com/gianguyen14/VerityTrust-XAI-Website.git}"
 NODE_VERSION="22.21.0"
@@ -81,7 +84,16 @@ log "Lấy mẫu tập test"
   --per-class "$TEST_PER_CLASS" --langs "$LANGS" --seed 11 --out "$DATA/test-raw.jsonl"
 
 log "Chuyển sang định dạng huấn luyện"
-npx tsx scripts/import-pages.ts --in "$DATA/train-raw.jsonl" --out "$DATA/train.jsonl"
+APPEND=()
+if [ -n "$EXTRA_PAGES" ]; then
+  log "Tải trang tự thu để gộp: $EXTRA_PAGES"
+  curl -fsSL "$EXTRA_PAGES" -o "$DATA/extra.download"
+  if gzip -t "$DATA/extra.download" 2>/dev/null; then gunzip -c "$DATA/extra.download" > "$DATA/extra.jsonl"; else mv "$DATA/extra.download" "$DATA/extra.jsonl"; fi
+  rm -f "$DATA/extra.download"
+  log "Trang tự thu: $(wc -l < "$DATA/extra.jsonl") trang"
+  APPEND=(--append-to "$DATA/extra.jsonl")
+fi
+npx tsx scripts/import-pages.ts --in "$DATA/train-raw.jsonl" --out "$DATA/train.jsonl" "${APPEND[@]}"
 npx tsx scripts/import-pages.ts --in "$DATA/test-raw.jsonl" --out "$DATA/test.jsonl" --exclude-owners "$DATA/train.jsonl"
 rm -f "$DATA/train-raw.jsonl" "$DATA/test-raw.jsonl"
 
